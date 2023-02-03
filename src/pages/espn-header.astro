@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="espn header">
+  <main class="container">
+    <ul>
+      <li>NBA</li>
+      <li>NFL</li>
+      <li>NCAAF</li>
+      <li>MLB</li>
+      <li>NCAAM</li>
+      <li>NHL</li>
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+  }
+  ul {
+    border: 1px var(--color) solid;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  ul:hover li {
+    opacity: 0.5;
+  }
+  ul li {
+    list-style: none;
+    margin-bottom: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  ul li:hover {
+    opacity: 1;
+  }
+</style>
