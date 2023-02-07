@@ -1,52 +1,17 @@
 ---
 import { BarChart } from "../../components/BarChart";
 import Layout from "../../layouts/Layout.astro";
+import { getWinsByPlayer } from "../../dataUtils/getWinsByPlayer";
+import { getVotesByPlayer } from "../../dataUtils/getVotesByPlayer";
 import videoGameOSTPicks from "./videoGameOSTPicks.json";
 import videoGameOSTMatchups from "./videoGameOSTMatchups.json";
 
-interface Matchup {
-  winner: string;
-}
-interface WinsArrayObj {
-  player: string;
-  wins: number;
-}
-interface Pick {
-  seed: number;
-  player: string;
-  pick: string;
-}
-
-function getPlayerbyPick(pick: string, picks: Pick[]) {
-  return picks.filter((pickObj) => pickObj.pick === pick)[0].player;
-}
-
-function getWinsByPlayer(picks: Pick[], matchups: object[]) {
-  const winsObj = matchups.reduce((winObj, matchup: Matchup) => {
-    const player = getPlayerbyPick(matchup.winner, picks);
-    if (!winObj.hasOwnProperty(player)) {
-      return { ...winObj, [player]: 1 };
-    }
-    return { ...winObj, [player]: winObj[player] + 1 };
-  }, {});
-
-  const playerSet = new Set();
-  picks.forEach((pick) => playerSet.add(pick.player));
-  const playerArray = Array.from(playerSet) as string[];
-  const playersWithWins = Object.keys(winsObj);
-
-  const winsArray = playerArray
-    .map((player) => {
-      if (playersWithWins.includes(player)) {
-        return { player: player, wins: winsObj[player] };
-      }
-      return { player: player, wins: 0 };
-    })
-    .sort((a, b) => b.wins - a.wins);
-
-  return winsArray;
-}
 const vgOstWinsByPlayer = getWinsByPlayer(
+  videoGameOSTPicks,
+  videoGameOSTMatchups
+);
+
+const vgOstVotesByPlayer = getVotesByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups
 );
@@ -54,11 +19,36 @@ const vgOstWinsByPlayer = getWinsByPlayer(
 
 <Layout title="Matchups">
   <main class="container">
-    <h1>Data visualization fun for Matchups</h1>
-    <h3>Video Game OST</h3>
-    <div>
-      <p>Total Wins</p>
-      <BarChart client:only="react" data={vgOstWinsByPlayer} />
+    <header>
+      <h1>Data visualization fun for Matchups</h1>
+      <h3>Video Game OST</h3>
+    </header>
+    <div class="chart-grid">
+      <article>
+        <h6>Total Wins</h6>
+        <BarChart client:only="react" data={vgOstWinsByPlayer} />
+      </article>
+      <article>
+        <h6>Total Votes</h6>
+        <BarChart client:only="react" data={vgOstVotesByPlayer} />
+      </article>
     </div>
   </main>
 </Layout>
+
+<style>
+  h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  article {
+    margin-top: 0.5rem;
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem; */
+  }
+
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+</style>
