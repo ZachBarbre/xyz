@@ -1,0 +1,12 @@
+[
+  {
+    "side": "left",
+    "matchup": 1,
+    "round": 5,
+    "children": [
+      { "matchup": 1, "round": 4 },
+      { "matchup": 1, "round": 4 }
+    ]
+  },
+  { "side": "right" }
+]

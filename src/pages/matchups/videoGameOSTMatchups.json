@@ -308,5 +308,25 @@
     "winVotes": 5,
     "lossVotes": 4,
     "judgeVote": false
+  },
+  {
+    "round": 3,
+    "winner": "Scott Pilgrim vs. The World: The Game",
+    "winningSong": "https://open.spotify.com/track/3fap09mmKXEDCxMWYLzpVq?si=OUq2EDz-TiqxcZHIhdO1KQ&context=spotify%3Aalbum%3A3DNHW2ckMRr3v0f7JF3HcR",
+    "loser": "Persona 5",
+    "losingSong": "https://open.spotify.com/track/4AuZBIN4aeFL9egQldQfRn?si=vvyykIjJQROQPbMlcZF1xA",
+    "winVotes": 6,
+    "lossVotes": 5,
+    "judgeVote": true
+  },
+  {
+    "round": 3,
+    "winner": "Guilty Gear X",
+    "winningSong": "https://open.spotify.com/track/3JPDRmHAxdC58CS6sBXpMu?si=54oGHYj7Sy-mxC92EaXPiA&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
+    "loser": "Megaman 3",
+    "losingSong": "https://open.spotify.com/track/3yrrNMGyFkU5lcEock8w8T?si=zNhGmfdIRgud4XKyTveYJg&utm_source=copy-link",
+    "winVotes": 7,
+    "lossVotes": 2,
+    "judgeVote": false
   }
 ]
