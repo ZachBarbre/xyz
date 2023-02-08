@@ -1,10 +1,19 @@
 ---
 import { BarChart } from "../../components/BarChart";
+import { Bracket } from "../../components/Bracket";
 import Layout from "../../layouts/Layout.astro";
 import { getWinsByPlayer } from "../../dataUtils/getWinsByPlayer";
 import { getVotesByPlayer } from "../../dataUtils/getVotesByPlayer";
 import videoGameOSTPicks from "./videoGameOSTPicks.json";
 import videoGameOSTMatchups from "./videoGameOSTMatchups.json";
+import videoGameOSTBracket from "./videoGameOSTBracket.json";
+import { buildBracket } from "../../dataUtils/buildBracket";
+
+const vgOSTBracket = buildBracket(
+  videoGameOSTBracket,
+  videoGameOSTPicks,
+  videoGameOSTMatchups
+);
 
 const vgOstWinsByPlayer = getWinsByPlayer(
   videoGameOSTPicks,
@@ -23,6 +32,7 @@ const vgOstVotesByPlayer = getVotesByPlayer(
       <h1>Data visualization fun for Matchups</h1>
       <h3>Video Game OST</h3>
     </header>
+    <Bracket client:only="react" data={vgOSTBracket} />
     <div class="chart-grid">
       <article>
         <h6>Total Wins</h6>

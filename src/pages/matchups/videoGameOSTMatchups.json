@@ -1,6 +1,7 @@
 [
   {
     "round": 0,
+    "matchup": 1,
     "winner": "Ys IX: Monstrum Nox",
     "winningSong": "https://open.spotify.com/track/0xKsqM6m90xy3jKnfpQh4I?si=Skq2BgtQQjqHMZEoL8b0pg&utm_source=copy-link",
     "loser": "Half-Life",
@@ -11,6 +12,7 @@
   },
   {
     "round": 0,
+    "matchup": 2,
     "winner": "Katamari Damacy",
     "winningSong": "https://www.youtube.com/watch?v=iMH49ieL4es",
     "loser": "R4: Ridge Racer Type 4",
@@ -21,6 +23,7 @@
   },
   {
     "round": 0,
+    "matchup": 3,
     "winner": "Cyber Shadow",
     "winningSong": "https://open.spotify.com/track/5i6ba0vhU4FOuwkdLCChau?si=6_vGaqiMTdeuWubJJ2Fynw&utm_source=copy-link",
     "loser": "Wave Race 64",
@@ -31,6 +34,7 @@
   },
   {
     "round": 0,
+    "matchup": 4,
     "winner": "Everhood",
     "winningSong": "https://open.spotify.com/track/2Alz3ZzKfS75ZnhJDix7cB?si=Aopb4tgcR36e3e5rXV0FPg",
     "loser": "Celeste",
@@ -41,6 +45,7 @@
   },
   {
     "round": 1,
+    "matchup": 1,
     "winner": "Ys IX: Monstrum Nox",
     "winningSong": "https://open.spotify.com/track/4yvbrEScaYxiSdKGwM3fFI?si=qoOYbyASRYWUZSCo7Dwd9A&context=spotify%3Aalbum%3A2Vp49Iz915YBvGZfTEcBdw",
     "loser": "Symphony of the Night",
@@ -51,6 +56,7 @@
   },
   {
     "round": 1,
+    "matchup": 2,
     "winner": "Hollow Knight",
     "winningSong": "https://open.spotify.com/track/5WtoiziTiOpTgQTQRpbXCa",
     "loser": "Persona 4",
@@ -61,6 +67,7 @@
   },
   {
     "round": 1,
+    "matchup": 3,
     "winner": "Street Fighter 2 Turbo",
     "winningSong": "https://open.spotify.com/track/29drzlJamuYPBRh1LPpXM4?si=0YIWnoQLRX-NAkXoFK85zg",
     "loser": "Contra",
@@ -71,6 +78,7 @@
   },
   {
     "round": 1,
+    "matchup": 4,
     "winner": "Megaman 2",
     "winningSong": "https://www.youtube.com/watch?v=aTbfpkByIM8",
     "loser": "Final Fantasy X",
@@ -81,6 +89,7 @@
   },
   {
     "round": 1,
+    "matchup": 5,
     "winner": "Scott Pilgrim vs. The World: The Game",
     "winningSong": "https://open.spotify.com/track/5C8LL30HEDAeTUVsZtBOYV?si=75a6adc573fe4ef7",
     "loser": "Hades",
@@ -91,6 +100,7 @@
   },
   {
     "round": 1,
+    "matchup": 6,
     "winner": "Donkey Kong Country 2",
     "winningSong": "https://www.youtube.com/watch?v=x5EgRk0mQM8",
     "loser": "GoldenEye 007",
@@ -101,6 +111,7 @@
   },
   {
     "round": 1,
+    "matchup": 7,
     "winner": "Tower of Heaven",
     "winningSong": "https://open.spotify.com/track/0d69L7QOD3EJgq889f2HT1?si=3ES9_CHRQ6WbTzLKTdMAqg",
     "loser": "Bravely Default",
@@ -111,6 +122,7 @@
   },
   {
     "round": 1,
+    "matchup": 8,
     "winner": "Persona 5",
     "winningSong": "https://open.spotify.com/track/4cPnNnTMkJ6soUOUzEtmcp?si=ydbl-K_JQWWOrA5kIN6O6A",
     "loser": "Katamari Damacy",
@@ -121,6 +133,7 @@
   },
   {
     "round": 1,
+    "matchup": 9,
     "winner": "Cyber Shadow",
     "winningSong": "https://open.spotify.com/track/6OUTKFjfxtrFOki7tMKcN2?si=RW0eyVxITDKgGL1AFIlWqw",
     "loser": "DOOM 2016",
@@ -131,6 +144,7 @@
   },
   {
     "round": 1,
+    "matchup": 10,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/0XLlfjfhzq93XqqbGefmg3?si=f92ffb8de8824da2",
     "loser": "The Flame in the Flood",
@@ -141,6 +155,7 @@
   },
   {
     "round": 1,
+    "matchup": 11,
     "winner": "Megaman 3",
     "winningSong": "https://open.spotify.com/track/769f0DXoTKRxWcjXuaRbnJ?si=jVrdlyVISKi_4lJLue5NBw",
     "loser": "C&C Red Alert",
@@ -151,6 +166,7 @@
   },
   {
     "round": 1,
+    "matchup": 12,
     "winner": "Sound Shapes",
     "winningSong": "https://www.youtube.com/watch?v=h3VQuoY0EgE",
     "loser": "Megaman X",
@@ -161,6 +177,7 @@
   },
   {
     "round": 1,
+    "matchup": 13,
     "winner": "Sonic 2",
     "winningSong": "https://youtu.be/-LYB7iLZNWE",
     "loser": "Mass Effect 2",
@@ -171,6 +188,7 @@
   },
   {
     "round": 1,
+    "matchup": 14,
     "winner": "Undertale",
     "winningSong": "https://open.spotify.com/track/1J03Vp93ybKIxfzYI4YJtL?si=6AyOyQ73TVKxuiWW8grihw",
     "loser": "Streets of Rage 2",
@@ -181,6 +199,7 @@
   },
   {
     "round": 1,
+    "matchup": 15,
     "winner": "Shovel Knight",
     "winningSong": "https://open.spotify.com/track/33SGhp4QaGuTrFlsMPoPkn?si=04686e73b8a64590",
     "loser": "Street Fighter III: 3rd Strike",
@@ -191,6 +210,7 @@
   },
   {
     "round": 1,
+    "matchup": 16,
     "winner": "Everhood",
     "winningSong": "https://open.spotify.com/track/7I1ty7gSkgNB3TdG9KRNZZ?si=kjbICoeZRU-qjl5KUjttlw",
     "loser": "Mortal Kombat 2",
@@ -201,6 +221,7 @@
   },
   {
     "round": 2,
+    "matchup": 1,
     "winner": "Ys IX: Monstrum Nox",
     "winningSong": "https://open.spotify.com/track/7HS9P3kehfjLT0vUQM76LW?si=83UugvhaRS6QJTJRyHndSQ",
     "loser": "Hollow Knight",
@@ -211,6 +232,7 @@
   },
   {
     "round": 2,
+    "matchup": 2,
     "winner": "Street Fighter 2 Turbo",
     "winningSong": "https://open.spotify.com/track/5ZbevCJmaCpXxDEmNBxpgY?si=c9Gl6hgfRnuaDLllmemFhw",
     "loser": "Megaman 2",
@@ -221,6 +243,7 @@
   },
   {
     "round": 2,
+    "matchup": 3,
     "winner": "Scott Pilgrim vs. The World: The Game",
     "winningSong": "https://open.spotify.com/track/1aQhjI5SMYJ53xtGXpp0Vh?si=GUwJnn5UTcixs2RZpNfabA",
     "loser": "Donkey Kong Country 2",
@@ -231,6 +254,7 @@
   },
   {
     "round": 2,
+    "matchup": 4,
     "winner": "Persona 5",
     "winningSong": "https://open.spotify.com/track/0LNyWv4RYKbaXIvzk6nMxZ?si=Ina8xRZhSvmWhepltGlgpg",
     "loser": "Tower of Heaven",
@@ -241,6 +265,7 @@
   },
   {
     "round": 2,
+    "matchup": 5,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/2ugKeOJZ2tbuadiLruPTgI?si=8a7c424e419a4901",
     "loser": "Cyber Shadow",
@@ -251,6 +276,7 @@
   },
   {
     "round": 2,
+    "matchup": 6,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/2ugKeOJZ2tbuadiLruPTgI?si=8a7c424e419a4901",
     "loser": "Cyber Shadow",
@@ -261,6 +287,7 @@
   },
   {
     "round": 2,
+    "matchup": 7,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/2ugKeOJZ2tbuadiLruPTgI?si=8a7c424e419a4901",
     "loser": "Cyber Shadow",
@@ -271,6 +298,7 @@
   },
   {
     "round": 2,
+    "matchup": 8,
     "winner": "Megaman 3",
     "winningSong": "https://open.spotify.com/track/5EBvGumBXOovKo1myjSYQj?si=oj3fsaB6RfSlrJ7I1jLg4Q&utm_source=copy-link",
     "loser": "Sound Shapes",
@@ -281,6 +309,7 @@
   },
   {
     "round": 2,
+    "matchup": 9,
     "winner": "Sonic 2",
     "winningSong": "https://youtu.be/nhHa7ph5GLg",
     "loser": "Undertale",
@@ -291,6 +320,7 @@
   },
   {
     "round": 2,
+    "matchup": 10,
     "winner": "Everhood",
     "winningSong": "https://open.spotify.com/track/65vaHbThKuxEXwpjBHtiTV?si=XGaJcvH_T9iQFF567YWm0w",
     "loser": "Shovel Knight",
@@ -301,6 +331,7 @@
   },
   {
     "round": 3,
+    "matchup": 1,
     "winner": "Ys IX: Monstrum Nox",
     "winningSong": "https://open.spotify.com/track/5vPW19YQBs6HwulNdbzTsQ?si=vnZ-HxQzTceZRcgxYI3ogA&utm_source=copy-link",
     "loser": "Street Fighter 2 Turbo",
@@ -311,6 +342,7 @@
   },
   {
     "round": 3,
+    "matchup": 2,
     "winner": "Scott Pilgrim vs. The World: The Game",
     "winningSong": "https://open.spotify.com/track/3fap09mmKXEDCxMWYLzpVq?si=OUq2EDz-TiqxcZHIhdO1KQ&context=spotify%3Aalbum%3A3DNHW2ckMRr3v0f7JF3HcR",
     "loser": "Persona 5",
@@ -321,6 +353,7 @@
   },
   {
     "round": 3,
+    "matchup": 4,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/3JPDRmHAxdC58CS6sBXpMu?si=54oGHYj7Sy-mxC92EaXPiA&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
     "loser": "Megaman 3",
