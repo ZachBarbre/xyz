@@ -2,12 +2,12 @@
 import { BarChart } from "../../components/BarChart";
 import { Bracket } from "../../components/Bracket";
 import Layout from "../../layouts/Layout.astro";
-import { getWinsByPlayer } from "../../dataUtils/getWinsByPlayer";
-import { getVotesByPlayer } from "../../dataUtils/getVotesByPlayer";
+import { getWinsByPlayer } from "../../matchupDataUtils/getWinsByPlayer";
+import { getVotesByPlayer } from "../../matchupDataUtils/getVotesByPlayer";
 import videoGameOSTPicks from "./videoGameOSTPicks.json";
 import videoGameOSTMatchups from "./videoGameOSTMatchups.json";
 import videoGameOSTBracket from "./videoGameOSTBracket.json";
-import { buildBracket } from "../../dataUtils/buildBracket";
+import { buildBracket } from "../../matchupDataUtils/buildBracket";
 
 const vgOSTBracket = buildBracket(
   videoGameOSTBracket,
