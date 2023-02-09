@@ -12,7 +12,6 @@ export function BracketSVG({
   setMatchupDetails,
 }): JSX.Element {
   const width = parentWidth < 700 ? 700 : parentWidth;
-  console.log("🚀 ~ file: BracketSVG.tsx:15 ~ width", width);
   const height = width * 0.55;
 
   const xMax = width - margin.left - margin.right;

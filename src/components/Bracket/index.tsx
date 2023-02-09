@@ -22,7 +22,7 @@ function DetailCard({ heading, body, songURL = null }) {
   );
 }
 
-function NotPlayed({ player1, player2, seed1, seed2 }) {
+function NotPlayed({ player1, player2, seed1, seed2, pick1, pick2 }) {
   if (player1 || player2) {
     return (
       <div className={styles.detailGrid}>
@@ -30,12 +30,14 @@ function NotPlayed({ player1, player2, seed1, seed2 }) {
           <>
             <DetailCard heading="Player 1" body={player1} />
             <DetailCard heading="Seed 1" body={seed1} />
+            <DetailCard heading="Pick 1" body={pick1} />
           </>
         )}
         {player2 && (
           <>
             <DetailCard heading="Player 2" body={player2} />
             <DetailCard heading="Seed 2" body={seed2} />
+            <DetailCard heading="Pick 2" body={pick2} />
           </>
         )}
       </div>
@@ -59,11 +61,8 @@ function getPlayerNumbers(matchup: TreeNode) {
 
 export function Bracket({ data }) {
   const [matchupDetails, setMatchupDetails] = useState<TreeNode>();
-  console.log(
-    "🚀 ~ file: index.tsx:12 ~ Bracket ~ matchupDetails",
-    matchupDetails
-  );
   const playerNumbers = getPlayerNumbers(matchupDetails);
+
   return (
     <>
       <ParentSize className={styles.scrollContainer}>
@@ -128,6 +127,8 @@ export function Bracket({ data }) {
             player2={matchupDetails?.player2}
             seed1={matchupDetails?.pick1Seed}
             seed2={matchupDetails?.pick2Seed}
+            pick1={matchupDetails?.pick1}
+            pick2={matchupDetails?.pick2}
           />
         )}
       </article>
