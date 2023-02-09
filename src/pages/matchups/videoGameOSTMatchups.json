@@ -287,18 +287,7 @@
   },
   {
     "round": 2,
-    "matchup": 7,
-    "winner": "Guilty Gear X",
-    "winningSong": "https://open.spotify.com/track/2ugKeOJZ2tbuadiLruPTgI?si=8a7c424e419a4901",
-    "loser": "Cyber Shadow",
-    "losingSong": "https://open.spotify.com/track/5kQCiRVKdir6eKJ8IUiQAJ?si=1guP8qudQ5qxYBJyD3U_lw&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
-    "winVotes": 7,
-    "lossVotes": 3,
-    "judgeVote": false
-  },
-  {
-    "round": 2,
-    "matchup": 8,
+    "matchup": 6,
     "winner": "Megaman 3",
     "winningSong": "https://open.spotify.com/track/5EBvGumBXOovKo1myjSYQj?si=oj3fsaB6RfSlrJ7I1jLg4Q&utm_source=copy-link",
     "loser": "Sound Shapes",
@@ -309,7 +298,7 @@
   },
   {
     "round": 2,
-    "matchup": 9,
+    "matchup": 7,
     "winner": "Sonic 2",
     "winningSong": "https://youtu.be/nhHa7ph5GLg",
     "loser": "Undertale",
@@ -320,7 +309,7 @@
   },
   {
     "round": 2,
-    "matchup": 10,
+    "matchup": 8,
     "winner": "Everhood",
     "winningSong": "https://open.spotify.com/track/65vaHbThKuxEXwpjBHtiTV?si=XGaJcvH_T9iQFF567YWm0w",
     "loser": "Shovel Knight",
@@ -353,7 +342,7 @@
   },
   {
     "round": 3,
-    "matchup": 4,
+    "matchup": 3,
     "winner": "Guilty Gear X",
     "winningSong": "https://open.spotify.com/track/3JPDRmHAxdC58CS6sBXpMu?si=54oGHYj7Sy-mxC92EaXPiA&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
     "loser": "Megaman 3",

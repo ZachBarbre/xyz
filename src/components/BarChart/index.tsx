@@ -23,14 +23,7 @@ export interface BarSVGProps {
 }
 
 const margin = { top: 20, bottom: 60, left: 30, right: 20 };
-
-export function BarChart({ data }: BarProps) {
-  return (
-    <ParentSize className={styles.toolTipContainer}>
-      {({ width }) => <BarChartSVG data={data} parentWidth={width} />}
-    </ParentSize>
-  );
-}
+const lineTextColor = "#c2c9ce";
 
 function BarChartSVG({ data, parentWidth }: BarSVGProps) {
   const width = parentWidth < 500 ? parentWidth : 500;
@@ -38,8 +31,6 @@ function BarChartSVG({ data, parentWidth }: BarSVGProps) {
 
   const xMax = width - margin.left - margin.right;
   const yMax = height - margin.top - margin.bottom;
-
-  const lineTextColor = "#c2c9ce";
 
   const {
     tooltipData,
@@ -148,5 +139,13 @@ function BarChartSVG({ data, parentWidth }: BarSVGProps) {
         </TooltipWithBounds>
       )}
     </>
+  );
+}
+
+export function BarChart({ data }: BarProps) {
+  return (
+    <ParentSize className={styles.toolTipContainer}>
+      {({ width }) => <BarChartSVG data={data} parentWidth={width} />}
+    </ParentSize>
   );
 }

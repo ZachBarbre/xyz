@@ -146,11 +146,11 @@
           },
           {
             "round": 3,
-            "matchup": 7,
+            "matchup": 4,
             "children": [
               {
                 "round": 2,
-                "matchup": 3,
+                "matchup": 7,
                 "children": [
                   {
                     "round": 1,
@@ -160,7 +160,7 @@
                   {
                     "round": 1,
                     "matchup": 14,
-                    "seeds": [6, 12]
+                    "seeds": [6, 21]
                   }
                 ]
               },
