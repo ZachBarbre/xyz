@@ -44,7 +44,6 @@ function addWinLoss(tree: BracketMatchup, matchup: Matchup) {
 }
 
 function addRemaingPicks(tree: BracketMatchup, picks: Pick[]) {
-  console.log("🚀 ~ file: buildBracket.ts:46 ~ addRemaingPicks ~ tree", tree);
   const traverse = (node: BracketMatchup) => {
     if (node.children?.[0]) {
       traverse(node.children[0]);

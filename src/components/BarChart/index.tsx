@@ -15,17 +15,19 @@ export interface BarData {
 }
 export interface BarProps {
   data: BarData[];
+  ticks?: number;
 }
 
 export interface BarSVGProps {
   data: BarData[];
   parentWidth: number;
+  ticks: number;
 }
 
 const margin = { top: 20, bottom: 60, left: 30, right: 20 };
 const lineTextColor = "#c2c9ce";
 
-function BarChartSVG({ data, parentWidth }: BarSVGProps) {
+function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
   const width = parentWidth < 500 ? parentWidth : 500;
   const height = width * 0.8;
 
@@ -81,7 +83,12 @@ function BarChartSVG({ data, parentWidth }: BarSVGProps) {
       <svg width={width} height={height}>
         <rect fill="#052D3A" width={width} height={height} rx={10} />
         <Group left={margin.left} top={margin.top}>
-          <GridRows scale={yScale} width={xMax} height={yMax} />
+          <GridRows
+            scale={yScale}
+            width={xMax}
+            height={yMax}
+            numTicks={ticks}
+          />
           {parentWidth !== 0 &&
             data.map((d) => {
               const barHeight = yMax - yScale(getWins(d));
@@ -121,6 +128,7 @@ function BarChartSVG({ data, parentWidth }: BarSVGProps) {
               dx: "-0.25em",
               dy: "0.25em",
             })}
+            numTicks={ticks}
           />
         </Group>
       </svg>
@@ -142,10 +150,12 @@ function BarChartSVG({ data, parentWidth }: BarSVGProps) {
   );
 }
 
-export function BarChart({ data }: BarProps) {
+export function BarChart({ data, ticks = 10 }: BarProps) {
   return (
     <ParentSize className={styles.toolTipContainer}>
-      {({ width }) => <BarChartSVG data={data} parentWidth={width} />}
+      {({ width }) => (
+        <BarChartSVG data={data} parentWidth={width} ticks={ticks} />
+      )}
     </ParentSize>
   );
 }

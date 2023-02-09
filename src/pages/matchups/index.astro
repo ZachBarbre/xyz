@@ -4,6 +4,8 @@ import { Bracket } from "../../components/Bracket";
 import Layout from "../../layouts/Layout.astro";
 import { getWinsByPlayer } from "../../matchupDataUtils/getWinsByPlayer";
 import { getVotesByPlayer } from "../../matchupDataUtils/getVotesByPlayer";
+import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPlayer";
+import { getOneVoteWinsByPlayer } from "../../matchupDataUtils/getOneVotesWinsByPlayer";
 import videoGameOSTPicks from "./videoGameOSTPicks.json";
 import videoGameOSTMatchups from "./videoGameOSTMatchups.json";
 import videoGameOSTBracket from "./videoGameOSTBracket.json";
@@ -14,13 +16,20 @@ const vgOSTBracket = buildBracket(
   videoGameOSTPicks,
   videoGameOSTMatchups
 );
-
 const vgOstWinsByPlayer = getWinsByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups
 );
-
+const totalMatchUps = videoGameOSTMatchups.length;
 const vgOstVotesByPlayer = getVotesByPlayer(
+  videoGameOSTPicks,
+  videoGameOSTMatchups
+);
+const vgOstOneVoteWinsByPlayer = getOneVoteWinsByPlayer(
+  videoGameOSTPicks,
+  videoGameOSTMatchups
+);
+const vgOstJudgeVotesByPlayer = getJudgeVotesByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups
 );
@@ -35,14 +44,31 @@ const vgOstVotesByPlayer = getVotesByPlayer(
     <Bracket client:only="react" data={vgOSTBracket} />
     <div class="chart-grid">
       <article>
-        <h5>Total Wins</h5>
+        <h5>Total Wins <span>{`(Matchups Played: ${totalMatchUps})`}</span></h5>
         <BarChart client:only="react" data={vgOstWinsByPlayer} />
       </article>
       <article>
         <h5>Total Votes</h5>
         <BarChart client:only="react" data={vgOstVotesByPlayer} />
       </article>
+      <article>
+        <h5>One Vote Wins</h5>
+        <BarChart
+          client:only="react"
+          data={vgOstOneVoteWinsByPlayer}
+          ticks={5}
+        />
+      </article>
+      <article>
+        <h5>Judge Votes</h5>
+        <BarChart
+          client:only="react"
+          data={vgOstJudgeVotesByPlayer}
+          ticks={2}
+        />
+      </article>
     </div>
+    <div class="chart-grid"></div>
   </main>
 </Layout>
 
@@ -51,14 +77,21 @@ const vgOstVotesByPlayer = getVotesByPlayer(
     margin-bottom: 0.5rem;
   }
 
+  span {
+    font-size: 0.6rem;
+    padding-left: 0.5rem;
+  }
+
   article {
     margin-top: 0.5rem;
-    /* padding-left: 0.5rem;
-    padding-right: 0.5rem; */
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .chart-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
   }
 </style>
