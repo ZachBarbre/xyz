@@ -1,4 +1,4 @@
-import videoGameOSTPicks from "./videoGameOSTPicks.json";
+import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 
 export function get() {
   return {

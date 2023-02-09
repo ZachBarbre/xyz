@@ -6,9 +6,9 @@ import { getWinsByPlayer } from "../../matchupDataUtils/getWinsByPlayer";
 import { getVotesByPlayer } from "../../matchupDataUtils/getVotesByPlayer";
 import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPlayer";
 import { getOneVoteWinsByPlayer } from "../../matchupDataUtils/getOneVotesWinsByPlayer";
-import videoGameOSTPicks from "./videoGameOSTPicks.json";
-import videoGameOSTMatchups from "./videoGameOSTMatchups.json";
-import videoGameOSTBracket from "./videoGameOSTBracket.json";
+import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
+import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
+import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
 import { buildBracket } from "../../matchupDataUtils/buildBracket";
 
 const vgOSTBracket = buildBracket(
@@ -91,7 +91,14 @@ const vgOstJudgeVotesByPlayer = getJudgeVotesByPlayer(
 
   .chart-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 10px;
   }
+
+  @media (min-width: 1200px) {
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 10px;
+    }
 </style>

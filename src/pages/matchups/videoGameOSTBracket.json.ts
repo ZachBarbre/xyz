@@ -1,4 +1,4 @@
-import videoGameOSTBracket from "./videoGameOSTBracket.json";
+import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
 
 export function get() {
   return {
