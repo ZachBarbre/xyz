@@ -13,9 +13,9 @@ export function getBarChartArray(picks: Pick[], yObject: YObject) {
   const winsArray = playerArray
     .map((player) => {
       if (playersWithWins.includes(player)) {
-        return { player: player, yValue: yObject[player] };
+        return { xValue: player, yValue: yObject[player] };
       }
-      return { player: player, yValue: 0 };
+      return { xValue: player, yValue: 0 };
     })
     .sort((a, b) => b.yValue - a.yValue);
 

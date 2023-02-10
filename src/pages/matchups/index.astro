@@ -10,6 +10,7 @@ import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
 import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
 import { buildBracket } from "../../matchupDataUtils/buildBracket";
+import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
 
 const vgOSTBracket = buildBracket(
   videoGameOSTBracket,
@@ -44,6 +45,11 @@ const vgOstJudgeLossVotesByPlayer = getJudgeVotesByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups,
   "loser"
+);
+
+const vgOSTVotesByPick = getVotesByPick(
+  videoGameOSTPicks,
+  videoGameOSTMatchups
 );
 ---
 
@@ -96,7 +102,14 @@ const vgOstJudgeLossVotesByPlayer = getJudgeVotesByPlayer(
         />
       </article>
     </div>
-    <div class="chart-grid"></div>
+    <article>
+      <h5>Votes By Pick</h5>
+      <BarChart
+        client:only="react"
+        data={vgOSTVotesByPick}
+        margin={{ top: 20, bottom: 80, left: 30, right: 40 }}
+      />
+    </article>
   </main>
 </Layout>
 

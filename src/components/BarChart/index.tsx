@@ -10,25 +10,24 @@ import { localPoint } from "@visx/event";
 import styles from "./BarChart.module.css";
 
 export interface BarData {
-  player: string;
+  xValue: string;
   yValue: number;
 }
 export interface BarProps {
   data: BarData[];
   ticks?: number;
+  margin?: { top: number; bottom: number; left: number; right: number };
 }
 
-export interface BarSVGProps {
-  data: BarData[];
+export interface BarSVGProps extends BarProps {
   parentWidth: number;
-  ticks: number;
 }
 
-const margin = { top: 20, bottom: 60, left: 30, right: 20 };
 const lineTextColor = "#c2c9ce";
 
-function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
-  const width = parentWidth < 500 ? parentWidth : 500;
+function BarChartSVG({ data, parentWidth, ticks, margin }: BarSVGProps) {
+  const width = parentWidth;
+  // const width = parentWidth < 500 ? parentWidth : 500;
   const height = width * 0.8;
 
   const xMax = width - margin.left - margin.right;
@@ -43,7 +42,7 @@ function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
     hideTooltip,
   } = useTooltip({});
 
-  const getPlayer = (d: BarData) => d.player;
+  const getPlayer = (d: BarData) => d.xValue;
   const getWins = (d: BarData) => d.yValue;
 
   const xScale = useMemo(
@@ -66,10 +65,13 @@ function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
     [yMax]
   );
 
-  const handleMouseOver = (evt: MouseEvent, datum: number) => {
+  const handleMouseOver = (
+    evt: MouseEvent,
+    datum: { yValue: number; xValue: string }
+  ) => {
     const coords = localPoint(evt);
     showTooltip({
-      tooltipData: datum,
+      tooltipData: `${datum.xValue} - ${datum.yValue}`,
       tooltipLeft: coords.x,
       tooltipTop: coords.y,
     });
@@ -94,13 +96,13 @@ function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
               const barHeight = yMax - yScale(getWins(d));
               return (
                 <Bar
-                  key={d.player}
+                  key={d.xValue}
                   y={yMax - barHeight}
                   x={xScale(getPlayer(d))}
                   height={barHeight}
                   width={xScale.bandwidth()}
                   fill="#1095c1"
-                  onMouseMove={(evt) => handleMouseOver(evt, d.yValue)}
+                  onMouseMove={(evt) => handleMouseOver(evt, d)}
                   onMouseOut={handleMouseOut}
                 />
               );
@@ -112,10 +114,11 @@ function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
             tickStroke={lineTextColor}
             tickLabelProps={() => ({
               fill: lineTextColor,
-              fontSize: 11,
+              fontSize: data.length > 10 ? 9 : 11,
               textAnchor: "start",
               angle: 45,
             })}
+            numTicks={data.length}
           />
           <AxisLeft
             scale={yScale}
@@ -143,18 +146,27 @@ function BarChartSVG({ data, parentWidth, ticks }: BarSVGProps) {
             color: "#11191f",
           }}
         >
-          {`${tooltipData}`}
+          {String(tooltipData)}
         </TooltipWithBounds>
       )}
     </>
   );
 }
 
-export function BarChart({ data, ticks = 10 }: BarProps) {
+export function BarChart({
+  data,
+  ticks = 10,
+  margin = { top: 20, bottom: 60, left: 30, right: 20 },
+}: BarProps) {
   return (
     <ParentSize className={styles.toolTipContainer}>
       {({ width }) => (
-        <BarChartSVG data={data} parentWidth={width} ticks={ticks} />
+        <BarChartSVG
+          data={data}
+          parentWidth={width}
+          ticks={ticks}
+          margin={margin}
+        />
       )}
     </ParentSize>
   );
