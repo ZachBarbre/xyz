@@ -5,7 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getWinsByPlayer } from "../../matchupDataUtils/getWinsByPlayer";
 import { getVotesByPlayer } from "../../matchupDataUtils/getVotesByPlayer";
 import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPlayer";
-import { getOneVoteWinsByPlayer } from "../../matchupDataUtils/getOneVotesWinsByPlayer";
+import { getOneVoteByPlayer } from "../../matchupDataUtils/getOneVoteByPlayer";
 import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
 import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
@@ -25,13 +25,25 @@ const vgOstVotesByPlayer = getVotesByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups
 );
-const vgOstOneVoteWinsByPlayer = getOneVoteWinsByPlayer(
+const vgOstOneVoteWinsByPlayer = getOneVoteByPlayer(
   videoGameOSTPicks,
-  videoGameOSTMatchups
+  videoGameOSTMatchups,
+  "winner"
 );
-const vgOstJudgeVotesByPlayer = getJudgeVotesByPlayer(
+const vgOstOneVoteLossesByPlayer = getOneVoteByPlayer(
   videoGameOSTPicks,
-  videoGameOSTMatchups
+  videoGameOSTMatchups,
+  "loser"
+);
+const vgOstJudgeWinVotesByPlayer = getJudgeVotesByPlayer(
+  videoGameOSTPicks,
+  videoGameOSTMatchups,
+  "winner"
+);
+const vgOstJudgeLossVotesByPlayer = getJudgeVotesByPlayer(
+  videoGameOSTPicks,
+  videoGameOSTMatchups,
+  "loser"
 );
 ---
 
@@ -60,10 +72,26 @@ const vgOstJudgeVotesByPlayer = getJudgeVotesByPlayer(
         />
       </article>
       <article>
-        <h5>Judge Votes</h5>
+        <h5>One Vote Losses</h5>
         <BarChart
           client:only="react"
-          data={vgOstJudgeVotesByPlayer}
+          data={vgOstOneVoteLossesByPlayer}
+          ticks={5}
+        />
+      </article>
+      <article>
+        <h5>Judge Win Votes</h5>
+        <BarChart
+          client:only="react"
+          data={vgOstJudgeWinVotesByPlayer}
+          ticks={2}
+        />
+      </article>
+      <article>
+        <h5>Judge Loss Votes</h5>
+        <BarChart
+          client:only="react"
+          data={vgOstJudgeLossVotesByPlayer}
           ticks={2}
         />
       </article>
@@ -101,4 +129,5 @@ const vgOstJudgeVotesByPlayer = getJudgeVotesByPlayer(
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 10px;
     }
+  }
 </style>

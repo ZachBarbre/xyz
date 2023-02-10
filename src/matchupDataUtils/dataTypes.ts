@@ -36,3 +36,7 @@ export interface BracketMatchup {
   pick2Seed?: number;
   player2?: string;
 }
+
+export interface YObject {
+  [key: string]: number;
+}

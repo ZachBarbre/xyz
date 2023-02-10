@@ -1,10 +1,15 @@
-import { Matchup, Pick } from "./dataTypes";
+import { Matchup, Pick, YObject } from "./dataTypes";
+import { getBarChartArray } from "./getBarChartArray";
 import { getPlayerByPick } from "./getPlayerByPicks";
 
-export function getJudgeVotesByPlayer(picks: Pick[], matchups: object[]) {
-  const votesObj = matchups.reduce((voteObj, matchup: Matchup) => {
+export function getJudgeVotesByPlayer(
+  picks: Pick[],
+  matchups: object[],
+  winLoss: "winner" | "loser"
+) {
+  const votesObj = matchups.reduce<YObject>((voteObj, matchup: Matchup) => {
     if (matchup.judgeVote) {
-      const player = getPlayerByPick(matchup.winner, picks);
+      const player = getPlayerByPick(matchup[winLoss], picks);
       if (!voteObj.hasOwnProperty(player)) {
         return { ...voteObj, [player]: 1 };
       }
@@ -13,19 +18,7 @@ export function getJudgeVotesByPlayer(picks: Pick[], matchups: object[]) {
     return { ...voteObj };
   }, {});
 
-  const playerSet = new Set();
-  picks.forEach((pick) => playerSet.add(pick.player));
-  const playerArray = Array.from(playerSet) as string[];
-  const playersWithVotes = Object.keys(votesObj);
-
-  const votesArray = playerArray
-    .map((player) => {
-      if (playersWithVotes.includes(player)) {
-        return { player: player, yValue: votesObj[player] };
-      }
-      return { player: player, yValue: 0 };
-    })
-    .sort((a, b) => b.yValue - a.yValue);
+  const votesArray = getBarChartArray(picks, votesObj);
 
   return votesArray;
 }
