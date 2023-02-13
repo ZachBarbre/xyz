@@ -31,6 +31,11 @@ const vgOstOneVoteWinsByPlayer = getOneVoteByPlayer(
   videoGameOSTMatchups,
   "winner"
 );
+const totalOneVoteWins = vgOstOneVoteWinsByPlayer.reduce(
+  (wins, player) => wins + player.yValue,
+  0
+);
+console.log("🚀 ~ file: index.astro:35 ~ totalOneVoteWins", totalOneVoteWins);
 const vgOstOneVoteLossesByPlayer = getOneVoteByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups,
@@ -62,7 +67,7 @@ const vgOSTVotesByPick = getVotesByPick(
     <Bracket client:only="react" data={vgOSTBracket} />
     <div class="chart-grid">
       <article>
-        <h5>Total Wins <span>{`(Matchups Played: ${totalMatchUps})`}</span></h5>
+        <h5>Total Wins <span>{`Matchups Played: ${totalMatchUps}`}</span></h5>
         <BarChart client:only="react" data={vgOstWinsByPlayer} />
       </article>
       <article>
@@ -70,7 +75,15 @@ const vgOSTVotesByPick = getVotesByPick(
         <BarChart client:only="react" data={vgOstVotesByPlayer} />
       </article>
       <article>
-        <h5>One Vote Wins</h5>
+        <h5>
+          One Vote Wins <span
+            >{
+              `Total (%): ${totalOneVoteWins} (${Math.round(
+                (totalOneVoteWins / totalMatchUps) * 100
+              )}%)`
+            }</span
+          >
+        </h5>
         <BarChart
           client:only="react"
           data={vgOstOneVoteWinsByPlayer}
