@@ -401,4 +401,16 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 3,
+    matchup: 4,
+    winner: "Everhood",
+    winningSong:
+      "https://open.spotify.com/track/6v11xRSwlIskPbVyT42Mjd?si=PSlfV2USRIONO3orSTYy0g",
+    loser: "Sonic 2",
+    losingSong: "https://www.youtube.com/watch?v=yRuJfhEeCe8",
+    winVotes: 5,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
