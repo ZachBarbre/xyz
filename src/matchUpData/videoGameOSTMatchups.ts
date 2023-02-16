@@ -413,4 +413,17 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 4,
+    matchup: 1,
+    winner: "Scott Pilgrim vs. The World: The Game",
+    winningSong:
+      "https://open.spotify.com/track/3X2nFcTJR8tcAcOqNw129N?si=54f9a4e1a92642cf",
+    loser: "Ys IX: Monstrum Nox",
+    losingSong:
+      "https://open.spotify.com/track/4BRHzmPjwGVs5Xk0jsUe2s?si=qw5vImjvSTuQdkOZqGZZHQ",
+    winVotes: 5,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
