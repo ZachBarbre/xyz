@@ -426,4 +426,17 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 4,
+    matchup: 2,
+    winner: "Guilty Gear X",
+    winningSong:
+      "https://open.spotify.com/track/3MF4GjLuY2k8ID1Qkj4x4N?si=wj_Ebk6xTdaEfpRJwMBPUw&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
+    loser: "Everhood",
+    losingSong:
+      "https://open.spotify.com/track/7sHGiWBVrXE21GGltf7fJz?si=Ub_ioFSZSoyglqNg-O61tg",
+    winVotes: 7,
+    lossVotes: 2,
+    judgeVote: false,
+  },
 ];

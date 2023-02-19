@@ -35,7 +35,6 @@ const totalOneVoteWins = vgOstOneVoteWinsByPlayer.reduce(
   (wins, player) => wins + player.yValue,
   0
 );
-console.log("🚀 ~ file: index.astro:35 ~ totalOneVoteWins", totalOneVoteWins);
 const vgOstOneVoteLossesByPlayer = getOneVoteByPlayer(
   videoGameOSTPicks,
   videoGameOSTMatchups,
