@@ -439,4 +439,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 5,
+    matchup: 1,
+    winner: "Scott Pilgrim vs. The World: The Game",
+    winningSong:
+      "https://open.spotify.com/track/7sHGiWBVrXE21GGltf7fJz?si=Ub_ioFSZSoyglqNg-O61tg",
+    loser: "Guilty Gear X",
+    losingSong:
+      "https://open.spotify.com/track/40vWamEtVLbTqFhcLHn0GN?si=USd6TwjaRrK7dtsBNGIljA&context=spotify%3Aalbum%3A7JFEiI5MnQxwEimo4ihwMZ",
+    winVotes: 5,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
