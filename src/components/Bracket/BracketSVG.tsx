@@ -21,6 +21,26 @@ export function BracketSVG({
 
   const leftData = useMemo(() => hierarchy(data[0]), []);
   const rightData = useMemo(() => hierarchy(data[1]), []);
+  const winnerData = useMemo(() => {
+    if (data[0].winner) {
+      return {
+        ...data[0],
+        winningPlayer: data[0].player1,
+        pick2Seed: data[1].pick1Seed,
+        player2: data[1].player1,
+      };
+    }
+    if (data[1].winner) {
+      return {
+        ...data[1],
+        winningPlayer: data[1].player1,
+        pick2Seed: data[0].pick1Seed,
+        player2: data[0].player1,
+      };
+    }
+    return null;
+  }, []);
+
   const getXLeft = (data) => width / 2 - data.y;
   const getY = (data) => {
     if (data.depth === 0) {
@@ -98,6 +118,43 @@ export function BracketSVG({
           )}
         </Tree>
       </Group>
+      {winnerData ? (
+        <Group top={height / 2 - 20} left={xMax / 2 - 20}>
+          <rect
+            style={{ cursor: "pointer" }}
+            width={100}
+            height={40}
+            // x={}
+            // y={}
+            fill="#1095c1"
+            stroke="#11191f"
+            rx={10}
+            onClick={() => {
+              setMatchupDetails(winnerData);
+            }}
+          />
+          <text
+            dy="1.1em"
+            dx={50}
+            fontSize={11}
+            textAnchor="middle"
+            fill={lineTextColor}
+            style={{ pointerEvents: "none" }}
+          >
+            WINNER
+          </text>
+          <text
+            dy="3em"
+            dx={50}
+            fontSize={11}
+            textAnchor="middle"
+            fill={lineTextColor}
+            style={{ pointerEvents: "none" }}
+          >
+            {winnerData.winningPlayer}
+          </text>
+        </Group>
+      ) : null}
     </svg>
   );
 }
