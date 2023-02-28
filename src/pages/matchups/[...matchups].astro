@@ -6,29 +6,47 @@ import { getWinsByPlayer } from "../../matchupDataUtils/getWinsByPlayer";
 import { getVotesByPlayer } from "../../matchupDataUtils/getVotesByPlayer";
 import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPlayer";
 import { getOneVoteByPlayer } from "../../matchupDataUtils/getOneVoteByPlayer";
+import { buildBracket } from "../../matchupDataUtils/buildBracket";
+import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
 import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
 import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
-import { buildBracket } from "../../matchupDataUtils/buildBracket";
-import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
+import classicRockBracket from "../../matchUpData/classicRockBracket";
+import classicRockPicks from "../../matchUpData/classicRockPicks";
+import classicRockMatchups from "../../matchUpData/classicRockMatchups";
 
-const vgOSTBracket = buildBracket(
-  videoGameOSTBracket,
-  videoGameOSTPicks,
-  videoGameOSTMatchups
-);
-const vgOstWinsByPlayer = getWinsByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups
-);
-const totalMatchUps = videoGameOSTMatchups.length;
-const vgOstVotesByPlayer = getVotesByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups
-);
+export async function getStaticPaths() {
+  return [
+    {
+      params: { matchups: undefined },
+      props: {
+        title: "Classic Rock",
+        bracketSkeleton: classicRockBracket,
+        pickData: classicRockPicks,
+        matchupData: classicRockMatchups,
+      },
+    },
+    {
+      params: { matchups: "video-game-ost" },
+      props: {
+        title: "Video Game OST",
+        bracketSkeleton: videoGameOSTBracket,
+        pickData: videoGameOSTPicks,
+        matchupData: videoGameOSTMatchups,
+      },
+    },
+  ];
+}
+
+const { title, bracketSkeleton, pickData, matchupData } = Astro.props;
+
+const bracketData = buildBracket(bracketSkeleton, pickData, matchupData);
+const vgOstWinsByPlayer = getWinsByPlayer(pickData, matchupData);
+const totalMatchUps = matchupData.length;
+const vgOstVotesByPlayer = getVotesByPlayer(pickData, matchupData);
 const vgOstOneVoteWinsByPlayer = getOneVoteByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups,
+  pickData,
+  matchupData,
   "winner"
 );
 const totalOneVoteWins = vgOstOneVoteWinsByPlayer.reduce(
@@ -36,34 +54,31 @@ const totalOneVoteWins = vgOstOneVoteWinsByPlayer.reduce(
   0
 );
 const vgOstOneVoteLossesByPlayer = getOneVoteByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups,
+  pickData,
+  matchupData,
   "loser"
 );
 const vgOstJudgeWinVotesByPlayer = getJudgeVotesByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups,
+  pickData,
+  matchupData,
   "winner"
 );
 const vgOstJudgeLossVotesByPlayer = getJudgeVotesByPlayer(
-  videoGameOSTPicks,
-  videoGameOSTMatchups,
+  pickData,
+  matchupData,
   "loser"
 );
 
-const vgOSTVotesByPick = getVotesByPick(
-  videoGameOSTPicks,
-  videoGameOSTMatchups
-);
+const vgOSTVotesByPick = getVotesByPick(pickData, matchupData);
 ---
 
 <Layout title="Matchups">
   <main class="container">
     <header>
       <h1>Data visualization fun for Matchups</h1>
-      <h3>Video Game OST</h3>
+      <h3>{title}</h3>
     </header>
-    <Bracket client:only="react" data={vgOSTBracket} />
+    <Bracket client:only="react" data={bracketData} />
     <div class="chart-grid">
       <article>
         <h5>Total Wins <span>{`Matchups Played: ${totalMatchUps}`}</span></h5>

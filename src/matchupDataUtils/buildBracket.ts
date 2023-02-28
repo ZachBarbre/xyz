@@ -54,8 +54,8 @@ function addRemaingPicks(tree: BracketMatchup, picks: Pick[]) {
     if (node.seeds?.length === 1) {
       const winner2 = node.children[0].winner;
       node.pick2 = winner2;
-      node.player2 = getPlayerByPick(winner2, picks);
-      node.pick2Seed = getSeedByPick(winner2, picks);
+      node.player2 = winner2 ? getPlayerByPick(winner2, picks) : "";
+      node.pick2Seed = winner2 ? getSeedByPick(winner2, picks) : null;
     } else {
       if (node.children && node.children[0]?.winner) {
         const winner1 = node.children[0].winner;

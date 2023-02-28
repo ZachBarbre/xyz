@@ -59,7 +59,7 @@ function BarChartSVG({ data, parentWidth, ticks, margin }: BarSVGProps) {
     () =>
       scaleLinear({
         range: [yMax, 0],
-        domain: [0, Math.round(Math.max(...data.map(getWins)))],
+        domain: [0, Math.round(Math.max(...data.map(getWins))) || 1],
         nice: true,
       }),
     [yMax]
