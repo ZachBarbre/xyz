@@ -12,4 +12,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 0,
+    matchup: 2,
+    winner: "The Band",
+    winningSong:
+      "https://open.spotify.com/track/4zZhTJUJpc4V97lPl84jzq?si=O8ErSnT6SFiIxt4cjaLTPw",
+    loser: "Big Star",
+    losingSong:
+      "https://open.spotify.com/track/74njazGdnO2igjEkb0mGiy?si=GA-m0eSNRguHDDeYBJxtmA",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
