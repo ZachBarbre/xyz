@@ -38,4 +38,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 0,
+    matchup: 4,
+    winner: "Led Zeppelin",
+    winningSong:
+      "https://open.spotify.com/track/43doj2cumGe9W3p5ucxaoH?si=FNtARu8TT3ya-vveviotsQ",
+    loser: "Toto",
+    losingSong:
+      "https://open.spotify.com/track/7o4QDgTxIq7Tq5jjEjzvE4?si=WeynYfdPRbmib7_atKKMaw",
+    winVotes: 7,
+    lossVotes: 3,
+    judgeVote: false,
+  },
 ];
