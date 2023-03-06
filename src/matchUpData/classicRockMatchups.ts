@@ -25,4 +25,17 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 0,
+    matchup: 3,
+    winner: "The Cars",
+    winningSong:
+      "https://open.spotify.com/track/2RH10TTlPhq8S61rXlVssL?si=3Nv-mk74Q4e6wZHNY2Yezg",
+    loser: "The Byrds",
+    losingSong:
+      "https://open.spotify.com/track/6kPxXhjSvy8RsmZBAJUiFs?si=pw5YgH91TAmyxOQSGFHEeA",
+    winVotes: 9,
+    lossVotes: 2,
+    judgeVote: false,
+  },
 ];
