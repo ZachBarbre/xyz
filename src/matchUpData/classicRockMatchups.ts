@@ -51,4 +51,17 @@ export default [
     lossVotes: 3,
     judgeVote: false,
   },
+  {
+    round: 0,
+    matchup: 5,
+    winner: "Kansas",
+    winningSong:
+      "https://open.spotify.com/track/4DMKwE2E2iYDKY01C335Uw?si=5UiM7mEZQWqddDVhtlM59w",
+    loser: "Judas Priest",
+    losingSong:
+      "https://open.spotify.com/track/0IXpUl1fn2QZcBavfuq0H4?si=Wc6tUzBmSLa0Fz43BCUUqw",
+    winVotes: 7,
+    lossVotes: 3,
+    judgeVote: false,
+  },
 ];
