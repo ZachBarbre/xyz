@@ -64,4 +64,17 @@ export default [
     lossVotes: 3,
     judgeVote: false,
   },
+  {
+    round: 0,
+    matchup: 6,
+    winner: "Heart",
+    winningSong:
+      "https://open.spotify.com/track/12ucCd1VANzNJSCMQ5UMvO?si=XE57UuQhS0O4XTIe8_S-kw&context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO1M2m7C",
+    loser: "Roky Erickson",
+    losingSong:
+      "https://open.spotify.com/track/5W7lOv4tIoOj2gI1qbyEji",
+    winVotes: 6,
+    lossVotes: 5,
+    judgeVote: true,
+  },
 ];
