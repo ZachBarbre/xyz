@@ -77,4 +77,30 @@ export default [
     lossVotes: 5,
     judgeVote: true,
   },
+  {
+    round: 0,
+    matchup: 7,
+    winner: "The Police",
+    winningSong:
+      "https://spotify.link/wr3Rexwh2xb",
+    loser: "Chicago",
+    losingSong:
+      "https://open.spotify.com/track/6FYcpCjvjTFlKRSSmh13lX?si=BzkpbG75Rx2zQh_2wFoVfA&app_destination=copy-link",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
+  {
+    round: 0,
+    matchup: 8,
+    winner: "Scorpions",
+    winningSong:
+      "https://open.spotify.com/track/26fZwf1ImE4aUJ4XaqOkUg?si=wxk0izOeSmmL_Fi4XhUPVg&app_destination=copy-link",
+    loser: "Cream",
+    losingSong:
+      "https://open.spotify.com/track/3Xls4cNOwy01dtrNXb1inG?si=hmMWu3zUSG-SwgooEQiwng&app_destination=copy-link",
+    winVotes: 10,
+    lossVotes: 1,
+    judgeVote: false,
+  },
 ];
