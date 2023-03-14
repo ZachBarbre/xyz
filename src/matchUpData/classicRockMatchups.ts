@@ -103,4 +103,17 @@ export default [
     lossVotes: 1,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 1,
+    winner: "Rush",
+    winningSong:
+      "https://spotify.link/cIU2MNX48xb",
+    loser: "T. Rex",
+    losingSong:
+      "https://open.spotify.com/track/6FsQrRpBLgsrFeAeiQqytm?si=zIg--XueTVyhXlEiL1kmPA&app_destination=copy-link",
+    winVotes: 6,
+    lossVotes: 5,
+    judgeVote: true,
+  },
 ];
