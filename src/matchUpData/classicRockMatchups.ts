@@ -116,4 +116,17 @@ export default [
     lossVotes: 5,
     judgeVote: true,
   },
+  {
+    round: 1,
+    matchup: 2,
+    winner: "Thin Lizzy",
+    winningSong:
+      "https://open.spotify.com/track/2C088eUsg78FCHmxpJSgjY?si=WOT2OyTnQGuavKvg9FBPbA",
+    loser: "Uriah Heep",
+    losingSong:
+      "https://open.spotify.com/track/1pUgfxRPGR9HHc2ozHOjMa?si=a0a8aa9a2a0f40d7",
+    winVotes: 8,
+    lossVotes: 2,
+    judgeVote: false,
+  },
 ];
