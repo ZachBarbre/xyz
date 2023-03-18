@@ -129,4 +129,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 3,
+    winner: "Lynyrd Skynyrd",
+    winningSong:
+      "https://open.spotify.com/track/3B7fVNn9gquWqOeZiv8n1V?si=d9a6579f54234d95",
+    loser: "Pink Floyd",
+    losingSong:
+      "https://open.spotify.com/track/0vFOzaXqZHahrZp6enQwQb?si=f44f9911bb7a4307",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
