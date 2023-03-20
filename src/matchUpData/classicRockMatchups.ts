@@ -142,4 +142,17 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 4,
+    winner: "Van Halen",
+    winningSong:
+      "https://open.spotify.com/track/05RgAMGypEvqhNs5hPCbMS?si=fkGA9PDcQMeGIiIBFdut0A",
+    loser: "The Band",
+    losingSong:
+      "https://open.spotify.com/track/2nvcTDmZkRWKNMAL29sLHo?si=L9bVasJ8Q2eu-qVi0FtKQA",
+    winVotes: 6,
+    lossVotes: 5,
+    judgeVote: true,
+  },
 ];
