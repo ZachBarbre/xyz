@@ -155,4 +155,17 @@ export default [
     lossVotes: 5,
     judgeVote: true,
   },
+  {
+    round: 1,
+    matchup: 5,
+    winner: "Queen",
+    winningSong:
+      "https://open.spotify.com/track/5jNn9QeC5PCZl3t27eusXg?si=vTfuzfoPQ_mL0C6mOct8QQ",
+    loser: "The Cars",
+    losingSong:
+      "https://open.spotify.com/track/2bNOq6aol7JZ0JJtLlg3TK?si=64915d9819ba49e2",
+    winVotes: 8,
+    lossVotes: 2,
+    judgeVote: false,
+  },
 ];
