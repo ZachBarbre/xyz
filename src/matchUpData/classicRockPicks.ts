@@ -24,7 +24,7 @@ export default [
   { seed: 23, pick: "T. Rex", player: "jclaxton2" },
   { seed: 24, pick: "Uriah Heep", player: "zkbarbre" },
   { seed: 25, pick: "Pink Floyd", player: "tres" },
-  { seed: 26, pick: "The Eagles", player: "scubajones" },
+  { seed: 26, pick: "Eagles", player: "scubajones" },
   { seed: 27, pick: "Led Zeppelin", player: "stevegulls" },
   { seed: 28, pick: "Supertramp", player: "Mitchell" },
   { seed: 29, pick: "Judas Priest", player: "NStreep" },

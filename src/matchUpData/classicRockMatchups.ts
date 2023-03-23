@@ -168,4 +168,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 6,
+    winner: "Fleetwood Mac",
+    winningSong:
+      "https://open.spotify.com/track/5e9TFTbltYBg2xThimr0rU?si=400529f38683452c",
+    loser: "Eagles",
+    losingSong:
+      "https://open.spotify.com/track/3XwfkaJOesD6fyMT5ZpkuX?si=11cb416297444752",
+    winVotes: 9,
+    lossVotes: 1,
+    judgeVote: false,
+  },
 ];
