@@ -181,4 +181,17 @@ export default [
     lossVotes: 1,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 7,
+    winner: "The Beatles",
+    winningSong:
+      "https://open.spotify.com/track/6dGnYIeXmHdcikdzNNDMm2",
+    loser: "CCR",
+    losingSong:
+      "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU?si=242c5fe29b0b44c8",
+    winVotes: 8,
+    lossVotes: 2,
+    judgeVote: false,
+  },
 ];
