@@ -194,4 +194,17 @@ export default [
     lossVotes: 2,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 8,
+    winner: "Boston",
+    winningSong:
+      "https://open.spotify.com/track/39C5FuZ8C8M0QI8CrMsPkR?si=wjFKpUKeQ4GC13wd7n6Pgw",
+    loser: "Led Zeppelin",
+    losingSong:
+      "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx?si=SI12u4j6REqhkFS0E1nqHA",
+    winVotes: 9,
+    lossVotes: 1,
+    judgeVote: false,
+  },
 ];
