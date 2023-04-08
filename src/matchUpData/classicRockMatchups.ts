@@ -207,4 +207,56 @@ export default [
     lossVotes: 1,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 9,
+    winner: "Tom Petty",
+    winningSong:
+      "https://open.spotify.com/track/7MRyJPksH3G2cXHN8UKYzP?si=04XM6UuAT-GUyJYJ857vGg",
+    loser: "Kansas",
+    losingSong:
+      "https://open.spotify.com/track/67lxZUDI6WkmMK8Kyv9Jim?si=a9f5029bf2564203",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 10,
+    winner: "Blue Oyster Cult",
+    winningSong:
+      "https://open.spotify.com/track/5QTxFnGygVM4jFQiBovmRo?si=e08e1352daf04394",
+    loser: "Supertramp",
+    losingSong:
+      "https://open.spotify.com/track/67oyFnjJnn78fZP9KjeZx0?si=551036d776104b4f",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 11,
+    winner: "Prince",
+    winningSong:
+      "https://open.spotify.com/track/0QeI79sp1vS8L3JgpEO7mD?si=6dd6b64918374224",
+    loser: "Motley Crue",
+    losingSong:
+      "https://open.spotify.com/track/3e6mbdvLtmvDhs0SYZyzg1?si=RdtOnDniSheHrbjxbX7V6g&dd=1",
+    winVotes: 10,
+    lossVotes: 0,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 12,
+    winner: "David Bowie",
+    winningSong:
+      "https://open.spotify.com/track/2RDXq7AwoEpvrjsXe4zlUc?si=R6CWhaKJTaSCUuwsXp9D5w",
+    loser: "Heart",
+    losingSong:
+      "https://open.spotify.com/track/5zH710lFSLtkHbMkslLDjR?si=3ea31e6c27274df6",
+    winVotes: 6,
+    lossVotes: 5,
+    judgeVote: true,
+  },
 ];
