@@ -259,4 +259,17 @@ export default [
     lossVotes: 5,
     judgeVote: true,
   },
+  {
+    round: 1,
+    matchup: 13,
+    winner: "The Who",
+    winningSong:
+      "https://open.spotify.com/track/3qiyyUfYe7CRYLucrPmulD",
+    loser: "The Police",
+    losingSong:
+      "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO?si=3b2782de1fc2440c",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
