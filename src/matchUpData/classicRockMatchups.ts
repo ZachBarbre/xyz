@@ -272,4 +272,17 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 14,
+    winner: "ELO",
+    winningSong:
+      "https://open.spotify.com/track/1Pd1h30mgU05QkWYhgFzwt?si=98b1d72e4e874384",
+    loser: "Meatloaf",
+    losingSong:
+      "https://open.spotify.com/track/2g7gviEeJr6pyxO7G35EWQ?si=s8NMTCzfTp25gGtLLmknLQ",
+    winVotes: 6,
+    lossVotes: 4,
+    judgeVote: false,
+  },
 ];
