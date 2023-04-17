@@ -285,4 +285,30 @@ export default [
     lossVotes: 4,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 15,
+    winner: "Cheap Trick",
+    winningSong:
+      "https://open.spotify.com/track/2ccUQnjjNWT0rsNnsBpsCA?si=a29187e08190461b",
+    loser: "Bruce Springsteen",
+    losingSong:
+      "https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s?si=aGzMFQ50RWmLBbHPAuC9wg",
+    winVotes: 7,
+    lossVotes: 3,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 16,
+    winner: "AC/DC",
+    winningSong:
+      "https://open.spotify.com/track/57bgtoPSgt236HzfBOd8kj?si=s2Oqi1XoQwCqzsqJXCjAeA",
+    loser: "Scorpions",
+    losingSong:
+      "https://open.spotify.com/track/0mOMvN8GNGAVW5e5934fUn?si=DKayej1fQK-_u1d3cCTkmw&dd=1",
+    winVotes: 9,
+    lossVotes:2,
+    judgeVote: false,
+  },
 ];
