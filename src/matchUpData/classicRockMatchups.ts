@@ -311,4 +311,17 @@ export default [
     lossVotes:2,
     judgeVote: false,
   },
+  {
+    round: 2,
+    matchup: 1,
+    winner: "Thin Lizzy",
+    winningSong:
+      "https://open.spotify.com/track/45IMiWdNPuIV55agMZAZ6h?si=lLLYoH8GRLiKgBk8Q_eApQ&dd=1",
+    loser: "Rush",
+    losingSong:
+      "https://open.spotify.com/track/3QZ7uX97s82HFYSmQUAN1D?si=df7ce5e2399546e6",
+    winVotes: 9,
+    lossVotes:3,
+    judgeVote: false,
+  },
 ];
