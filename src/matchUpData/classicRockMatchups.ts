@@ -324,4 +324,43 @@ export default [
     lossVotes:3,
     judgeVote: false,
   },
+  {
+    round: 2,
+    matchup: 2,
+    winner: "Van Halen",
+    winningSong:
+      "https://open.spotify.com/track/2fZTVlNbTrOAt05ohKJ3ym?si=plhQlTlyRBiFlEzurRK69A&dd=1",
+    loser: "Lynyrd Skynyrd",
+    losingSong:
+      "https://open.spotify.com/track/0ZQmpf5gk4k5VMopcAtyAc?si=a1752610f48c498b",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
+  },
+  {
+    round: 2,
+    matchup: 3,
+    winner: "Queen",
+    winningSong:
+      "https://open.spotify.com/track/1e9Tt3nKBwRbuaU79kN3dn?si=AUGvWMPZS5uCAqI0beXCKQ&dd=1",
+    loser: "Fleetwood Mac",
+    losingSong:
+      "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa?si=dpWzu-tjRCCzKp5IBQuhiA&dd=1",
+    winVotes: 7,
+    lossVotes:3,
+    judgeVote: false,
+  },
+  {
+    round: 2,
+    matchup: 4,
+    winner: "Boston",
+    winningSong:
+      "https://open.spotify.com/track/1GqlvSEtMx5xbGptxOTTyk?si=e9cb4141b8de4152",
+    loser: "The Beatles",
+    losingSong:
+      "https://open.spotify.com/track/1GqlvSEtMx5xbGptxOTTyk?si=e9cb4141b8de4152",
+    winVotes: 6,
+    lossVotes:5,
+    judgeVote: true,
+  },
 ];
