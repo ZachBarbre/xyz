@@ -355,12 +355,25 @@ export default [
     matchup: 4,
     winner: "Boston",
     winningSong:
-      "https://open.spotify.com/track/1GqlvSEtMx5xbGptxOTTyk?si=e9cb4141b8de4152",
+      "https://open.spotify.com/track/0aym2LBJBk9DAYuHHutrIl?si=046ef53c28c342df",
     loser: "The Beatles",
     losingSong:
       "https://open.spotify.com/track/1GqlvSEtMx5xbGptxOTTyk?si=e9cb4141b8de4152",
     winVotes: 6,
     lossVotes:5,
     judgeVote: true,
+  },
+  {
+    round: 2,
+    matchup: 5,
+    winner: "Tom Petty",
+    winningSong:
+      "https://open.spotify.com/track/4AiMaeCXwsldpwvA5wu5gM?si=XX-_4VfpR7a0ETJrbdglEQ",
+    loser: "Blue Oyster Cult",
+    losingSong:
+      "https://open.spotify.com/track/3fkPMWQ6cBNBLuFcPyMS8s?si=Foqr3N3ZSrq0u6NtKC4nww",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
   },
 ];
