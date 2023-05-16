@@ -376,4 +376,43 @@ export default [
     lossVotes:4,
     judgeVote: false,
   },
+  {
+    round: 2,
+    matchup: 6,
+    winner: "Prince",
+    winningSong:
+      "https://open.spotify.com/track/51H2y6YrNNXcy3dfc3qSbA?si=M4AhJsgpQjy9PZLd5hpXaw",
+    loser: "David Bowie",
+    losingSong:
+      "https://open.spotify.com/track/4JRem7xHp2l0kmUvt9zCKu?si=tas5hR37QKihHzTT0_EnjQ",
+    winVotes: 8,
+    lossVotes:2,
+    judgeVote: false,
+  },
+  {
+    round: 2,
+    matchup: 7,
+    winner: "ELO",
+    winningSong:
+      "https://open.spotify.com/track/0xAhbD6lCf5re1RXl5yiTm?si=AlNNBXzpQnOAhFWq7gqsfA",
+    loser: "The Who",
+    losingSong:
+      "https://open.spotify.com/track/6LbbHFEajG9e4m0G3L47c4?si=98121cc2b2b3423d",
+    winVotes: 8,
+    lossVotes:2,
+    judgeVote: false,
+  },
+  {
+    round: 2,
+    matchup: 8,
+    winner: "AC/DC",
+    winningSong:
+      "https://open.spotify.com/track/69QHm3pustz01CJRwdo20z?si=_TZ1veq3SpevQq73aePFiw",
+    loser: "Cheap Trick",
+    losingSong:
+      "https://open.spotify.com/track/6TBJCwgdhwkzjpSjdqJUHC?si=IP4BIoR3TzeB6y182JMInQ",
+    winVotes: 6,
+    lossVotes:5,
+    judgeVote: true,
+  },
 ];
