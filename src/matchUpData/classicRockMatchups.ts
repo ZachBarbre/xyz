@@ -415,4 +415,56 @@ export default [
     lossVotes:5,
     judgeVote: true,
   },
+  {
+    round: 3,
+    matchup: 1,
+    winner: "Thin Lizzy",
+    winningSong:
+      "https://open.spotify.com/track/5lT5cSoSC4Rpix5uVZyCwI?si=6WhY-eeGQ32Te1LCjWdnqQ",
+    loser: "Van Halen",
+    losingSong:
+      "https://open.spotify.com/track/6QDbGdbJ57Mtkflsg42WV5?si=SAI2mYcBSK-Fr_q-0zKXEg",
+    winVotes: 10,
+    lossVotes:0,
+    judgeVote: false,
+  },
+  {
+    round: 3,
+    matchup: 2,
+    winner: "Boston",
+    winningSong:
+      "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF?si=nPITNTIkQCa61_vu4noZHw",
+    loser: "Queen",
+    losingSong:
+      "https://open.spotify.com/track/4uY2ijmE5S2umgXo6cvXnJ?si=tzhb-i3zTU6m9650oTph6g",
+    winVotes: 6,
+    lossVotes:5,
+    judgeVote: true,
+  },
+  {
+    round: 3,
+    matchup: 3,
+    winner: "Tom Petty",
+    winningSong:
+      "https://open.spotify.com/track/0xNTHshHwDtCAn04Lq2i4H?si=K09g6aqeQeaaL0Amgubzbg",
+    loser: "Prince",
+    losingSong:
+      "https://open.spotify.com/track/54X78diSLoUDI3joC2bjMz?si=SpHxrM2PT3ed6EwByfiNBQ",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
+  },
+  {
+    round: 3,
+    matchup: 4,
+    winner: "ELO",
+    winningSong:
+      "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp?si=8zh3L0aMRHuWfNLeYlsb6A",
+    loser: "AC/DC",
+    losingSong:
+      "https://open.spotify.com/track/08mG3Y1vljYA6bvDt4Wqkj?si=oIwVA0bwTlq6ZPFMOQU1Lw",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
+  },
 ];

@@ -7,4 +7,5 @@ export default [
     { seed: 6, player: "ecryptus", pick: "Morbid Angel" },
     { seed: 7, player: "zkbarbre", pick: "The Black Dahlia Murder" },
     { seed: 8, player: "tres", pick: "Cradle of Filth" },
+    { seed: 9, player: "tres", pick: "Slayer" },
 ]
