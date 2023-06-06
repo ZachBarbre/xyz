@@ -467,4 +467,17 @@ export default [
     lossVotes:4,
     judgeVote: false,
   },
+  {
+    round: 4,
+    matchup: 1,
+    winner: "Boston",
+    winningSong:
+      "https://open.spotify.com/track/0870QNicMawQH2cnzBVZ3P?si=j1brcj0GQ7K0jD6NlCGA3w",
+    loser: "Thin Lizzy",
+    losingSong:
+      "https://open.spotify.com/track/2QKmX3eS0AE5DTLhHT8F4I?si=pMNMVEP7SsSQAv_HNAMa_A",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
+  },
 ];
