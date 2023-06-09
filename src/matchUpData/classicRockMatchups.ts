@@ -480,4 +480,17 @@ export default [
     lossVotes:4,
     judgeVote: false,
   },
+  {
+    round: 4,
+    matchup: 2,
+    winner: "ELO",
+    winningSong:
+      "https://open.spotify.com/track/72ahyckBJfTigJCFCviVN7?si=RGyhJbBjS7eKEPPuuwnNow&context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO4keHBe",
+    loser: "Tom Petty",
+    losingSong:
+      "https://open.spotify.com/track/5AzpZ5ADn1AFPxcEBd2Ugf?si=pfRrFH81QFSy1yn82SBCKQ",
+    winVotes: 6,
+    lossVotes:5,
+    judgeVote: true,
+  },
 ];
