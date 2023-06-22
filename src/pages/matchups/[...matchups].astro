@@ -14,11 +14,23 @@ import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
 import classicRockBracket from "../../matchUpData/classicRockBracket";
 import classicRockPicks from "../../matchUpData/classicRockPicks";
 import classicRockMatchups from "../../matchUpData/classicRockMatchups";
+import musicalsBracket from "../../matchUpData/musicalsBracket";
+import musicalsPicks from "../../matchUpData/musicalsPicks";
+import musicalsMatchups from "../../matchUpData/musicalsMatchups";
 
 export async function getStaticPaths() {
   return [
     {
       params: { matchups: undefined },
+      props: {
+        title: "Musicals",
+        bracketSkeleton: musicalsBracket,
+        pickData: musicalsPicks,
+        matchupData: musicalsMatchups,
+      },
+    },
+    {
+      params: { matchups: "classic-rock" },
       props: {
         title: "Classic Rock",
         bracketSkeleton: classicRockBracket,

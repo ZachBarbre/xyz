@@ -493,4 +493,17 @@ export default [
     lossVotes:5,
     judgeVote: true,
   },
+  {
+    round: 5,
+    matchup: 1,
+    winner: "Boston",
+    winningSong:
+      "https://open.spotify.com/track/5E89Izp4YhPyNShoxiOJ1u?si=250a157dfdeb4305",
+    loser: "ELO",
+    losingSong:
+      "https://open.spotify.com/track/0NN32Knbyo4gM1DKY9rdzg?si=suD3-WPQS-my0_SXghmWig&context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO4keHBe",
+    winVotes: 6,
+    lossVotes:4,
+    judgeVote: false,
+  },
 ];
