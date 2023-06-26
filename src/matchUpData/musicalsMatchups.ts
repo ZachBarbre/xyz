@@ -51,4 +51,17 @@ export default [
     lossVotes:1,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 5,
+    winner: "Les Miserables",
+    winningSong:
+      "https://www.youtube.com/watch?v=42IQ29b8YIU",
+    loser: "Popstar",
+    losingSong:
+      "https://youtu.be/CI79h2FSnS4",
+    winVotes: 6,
+    lossVotes:2,
+    judgeVote: false,
+  },
 ]
