@@ -64,4 +64,69 @@ export default [
     lossVotes:2,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 6,
+    winner: "Little Shop of Horrors",
+    winningSong:
+      "https://youtube.com/watch?v=9DD7VIKZnGA&feature=share7",
+    loser: "Walk Hard",
+    losingSong:
+      "https://youtu.be/HOi_kZffAho",
+    winVotes: 6,
+    lossVotes:2,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 7,
+    winner: "The Muppets",
+    winningSong:
+      "https://www.youtube.com/watch?v=cRTjksM3YAs",
+    loser: "A Goofy Movie",
+    losingSong:
+      "https://www.youtube.com/watch?v=cRTjksM3YAs",
+    winVotes: 6,
+    lossVotes:2,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 8,
+    winner: "Book of Mormon",
+    winningSong:
+      "https://www.youtube.com/watch?v=hdZ0KGXteQc",
+    loser: "Chess",
+    losingSong:
+      "https://www.youtube.com/watch?v=mNdCVTCM4Ws",
+    winVotes: 5,
+    lossVotes:3,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 9,
+    winner: "Encanto",
+    winningSong:
+      "https://www.youtube.com/watch?v=tQwVKr8rCYw",
+    loser: "The Wizard of Oz",
+    losingSong:
+      "https://www.youtube.com/watch?v=PSZxmZmBfnU",
+    winVotes: 6,
+    lossVotes:2,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 9,
+    winner: "The Nightmare Before Christmas",
+    winningSong:
+      "https://www.youtube.com/watch?v=ZVuToMilP0A",
+    loser: "Heathers, The Musical",
+    losingSong:
+      "https://www.youtube.com/watch?v=ry1yQASy1-Y",
+    winVotes: 7,
+    lossVotes:1,
+    judgeVote: false,
+  },
 ]
