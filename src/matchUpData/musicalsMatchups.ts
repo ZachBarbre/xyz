@@ -118,7 +118,7 @@ export default [
   },
   {
     round: 1,
-    matchup: 9,
+    matchup: 10,
     winner: "The Nightmare Before Christmas",
     winningSong:
       "https://www.youtube.com/watch?v=ZVuToMilP0A",
@@ -127,6 +127,32 @@ export default [
       "https://www.youtube.com/watch?v=ry1yQASy1-Y",
     winVotes: 7,
     lossVotes:1,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 11,
+    winner: "Chicago",
+    winningSong:
+      "https://youtu.be/SBM82Ju2kJU",
+    loser: "Frozen 2",
+    losingSong:
+      "https://www.youtube.com/watch?v=gIOyB9ZXn8s",
+    winVotes: 7,
+    lossVotes:1,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 12,
+    winner: "The Pick of Destiny",
+    winningSong:
+      "https://youtu.be/uXEyz1mGMEc",
+    loser: "Shrek",
+    losingSong:
+      "https://www.youtube.com/watch?v=KRasraWyy48",
+    winVotes: 8,
+    lossVotes:0,
     judgeVote: false,
   },
 ]
