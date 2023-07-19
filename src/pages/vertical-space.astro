@@ -3,5 +3,42 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="">
-  
+  <div class="container">
+
+    <header>Some Header</header>
+    <h1>Filling Vertical Space with Flexbox</h1>
+    <main>
+      <p>
+      This is some content where the height grows as needed
+      </p>
+      <p>
+        The container div has the following css with the height calculated to remove the site header. 
+        <pre>
+<code>
+  display: flex;
+  height: calc(100vh - 92px);
+  flex-direction: column;
+</code>
+        </pre>
+      </p>
+      <p>
+        This main element has <code>flex-grow: 1;</code> set and grows to fill the empty space. See the blue boarder going down to the footer. 
+      </p>
+    </main>
+    <footer>Some footer</footer>
+  </div>
 </Layout>
+
+<style>
+  div {
+    display: flex;
+    height: calc(100vh - 92px);
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+    border: 1px solid blue;
+    padding: 1rem;
+  }
+</style>
