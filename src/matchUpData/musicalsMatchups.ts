@@ -155,4 +155,17 @@ export default [
     lossVotes:0,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 13,
+    winner: "Jesus Christ Superstar",
+    winningSong:
+      "https://youtu.be/pqoeM18vCaU",
+    loser: "Trolls",
+    losingSong:
+      "https://youtu.be/9hPgjW2ou9E",
+    winVotes: 6,
+    lossVotes:2,
+    judgeVote: false,
+  },
 ]
