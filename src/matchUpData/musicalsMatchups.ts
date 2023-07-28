@@ -168,4 +168,43 @@ export default [
     lossVotes:2,
     judgeVote: false,
   },
+  {
+    round: 1,
+    matchup: 14,
+    winner: "Aladdin",
+    winningSong:
+      "https://youtu.be/mT_8FAMsmCM",
+    loser: "South Park - Bigger, Longer, and Uncut",
+    losingSong:
+      "https://m.youtube.com/watch?v=6wJXBUfcIOE",
+    winVotes: 5,
+    lossVotes:4,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 15,
+    winner: "The Lion King",
+    winningSong:
+      "https://www.youtube.com/watch?v=0bGjlvukgHU",
+    loser: "Spamalot",
+    losingSong:
+      "https://youtu.be/F-fG8c-CMoU",
+    winVotes: 5,
+    lossVotes:3,
+    judgeVote: false,
+  },
+  {
+    round: 1,
+    matchup: 16,
+    winner: "Xanadu",
+    winningSong:
+      "https://youtu.be/cLi8fTlDEag",
+    loser: "The Wiz",
+    losingSong:
+      "https://youtu.be/uNKmKOjGUbw",
+    winVotes: 5,
+    lossVotes:3,
+    judgeVote: false,
+  },
 ]
