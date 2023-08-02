@@ -207,4 +207,17 @@ export default [
     lossVotes:3,
     judgeVote: false,
   },
+  {
+    round: 2,
+    matchup: 1,
+    winner: "The Phantom of the Opera",
+    winningSong:
+      "https://www.youtube.com/watch?v=d3NIK-nsI2g",
+    loser: "Oklahoma",
+    losingSong:
+      "https://www.youtube.com/watch?v=O5APc0z49wg",
+    winVotes: 7,
+    lossVotes:1,
+    judgeVote: false,
+  },
 ]
