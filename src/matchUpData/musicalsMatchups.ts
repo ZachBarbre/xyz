@@ -220,4 +220,17 @@ export default [
     lossVotes:1,
     judgeVote: false,
   },
+  {
+    round: 2,
+    matchup: 1,
+    winner: "The Rocky Horror Picture Show",
+    winningSong:
+      "https://youtu.be/qE1RVUeQzdc",
+    loser: "Matilda",
+    losingSong:
+      "https://youtu.be/lUpAAHGA28s",
+    winVotes: 5,
+    lossVotes:4,
+    judgeVote: true,
+  },
 ]
