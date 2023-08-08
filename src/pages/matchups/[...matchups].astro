@@ -8,6 +8,9 @@ import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPla
 import { getOneVoteByPlayer } from "../../matchupDataUtils/getOneVoteByPlayer";
 import { buildBracket } from "../../matchupDataUtils/buildBracket";
 import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
+import metalPicks from "../../matchUpData/metalPicks";
+import metalBracket from "../../matchUpData/metalBracket";
+import metalMatchups from "../../matchUpData/metalMatchups";
 import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
 import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
@@ -17,6 +20,7 @@ import classicRockMatchups from "../../matchUpData/classicRockMatchups";
 import musicalsBracket from "../../matchUpData/musicalsBracket";
 import musicalsPicks from "../../matchUpData/musicalsPicks";
 import musicalsMatchups from "../../matchUpData/musicalsMatchups";
+
 
 export async function getStaticPaths() {
   return [
@@ -45,6 +49,15 @@ export async function getStaticPaths() {
         bracketSkeleton: videoGameOSTBracket,
         pickData: videoGameOSTPicks,
         matchupData: videoGameOSTMatchups,
+      },
+    },
+    {
+      params: { matchups: "metal" },
+      props: {
+        title: "Metal",
+        bracketSkeleton: metalBracket,
+        pickData: metalPicks,
+        matchupData: metalMatchups,
       },
     },
   ];

@@ -22,7 +22,7 @@ export function BracketSVG({
   const leftData = useMemo(() => hierarchy(data[0]), []);
   const rightData = useMemo(() => hierarchy(data[1]), []);
   const winnerData = useMemo(() => {
-    if (data[0].winner) {
+    if (data[0].winner === data[0].pick1) {
       return {
         ...data[0],
         winningPlayer: data[0].player1,
@@ -30,7 +30,7 @@ export function BracketSVG({
         player2: data[1].player1,
       };
     }
-    if (data[1].winner) {
+    if (data[0].winner) {
       return {
         ...data[1],
         winningPlayer: data[1].player1,
