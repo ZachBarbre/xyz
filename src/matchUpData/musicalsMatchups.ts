@@ -222,13 +222,26 @@ export default [
   },
   {
     round: 2,
-    matchup: 1,
+    matchup: 2,
     winner: "The Rocky Horror Picture Show",
     winningSong:
       "https://youtu.be/qE1RVUeQzdc",
     loser: "Matilda",
     losingSong:
       "https://youtu.be/lUpAAHGA28s",
+    winVotes: 5,
+    lossVotes:4,
+    judgeVote: true,
+  },
+  {
+    round: 2,
+    matchup: 3,
+    winner: "Little Shop of Horrors",
+    winningSong:
+      "https://www.youtube.com/watch?v=YoWom0CCRKM",
+    loser: "Les Miserables",
+    losingSong:
+      "https://youtu.be/-p6OH7FoWoQ",
     winVotes: 5,
     lossVotes:4,
     judgeVote: true,
