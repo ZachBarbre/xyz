@@ -169,7 +169,7 @@ export default [
                     round: 1,
                     matchup: 16,
                     seeds: [2],
-                    children: [{ round: 0, matchup: 4, seeds: [21, 33] }],
+                    children: [{ round: 0, matchup: 1, seeds: [31, 33] }],
                   },
                 ],
               },

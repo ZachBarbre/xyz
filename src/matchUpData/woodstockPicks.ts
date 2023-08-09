@@ -1,6 +1,6 @@
 export default [
   {seed: 1, player: "ecryptus", pick: "Metallica"},
-  {seed: 2, player: "Mitchell", pick: "Chemical Brothers"},
+  {seed: 2, player: "Mitchell", pick: "The Chemical Brothers"},
   {seed: 3, player: "nakatomi", pick: "Oleander"},
   {seed: 4, player: "frutibones", pick: "George Clinton"},
   {seed: 5, player: "stevegulls", pick: "Everclear"},
@@ -13,7 +13,7 @@ export default [
   {seed: 12, player: "mikeymorgs", pick: "Korn"},
   {seed: 13, player: "scubajones", pick: "Jamiroquai"},
   {seed: 14, player: "msntrnr", pick: "Bush"},
-  {seed: 15, player: "HaMadMan", pick: "Alanis Morisette"},
+  {seed: 15, player: "HaMadMan", pick: "Alanis Morissette"},
   {seed: 16, player: "Todd", pick: "The Offspring"},
   {seed: 17, player: "jclaxton2", pick: "Rage Against the Machine"},
   {seed: 18, player: "stevegulls", pick: "Our Lady Peace"},

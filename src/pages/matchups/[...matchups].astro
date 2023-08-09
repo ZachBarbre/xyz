@@ -8,6 +8,9 @@ import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPla
 import { getOneVoteByPlayer } from "../../matchupDataUtils/getOneVoteByPlayer";
 import { buildBracket } from "../../matchupDataUtils/buildBracket";
 import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
+import woodstockBracket from "../../matchUpData/woodstockBracket";
+import woodstockMatchups from "../../matchUpData/woodstockMatchups";
+import woodstockPicks from "../../matchUpData/woodstockPicks";
 import metalPicks from "../../matchUpData/metalPicks";
 import metalBracket from "../../matchUpData/metalBracket";
 import metalMatchups from "../../matchUpData/metalMatchups";
@@ -58,6 +61,15 @@ export async function getStaticPaths() {
         bracketSkeleton: metalBracket,
         pickData: metalPicks,
         matchupData: metalMatchups,
+      },
+    },
+    {
+      params: { matchups: "woodstock99" },
+      props: {
+        title: "Woodstock 99",
+        bracketSkeleton: woodstockBracket,
+        pickData: woodstockPicks,
+        matchupData: woodstockMatchups,
       },
     },
   ];
