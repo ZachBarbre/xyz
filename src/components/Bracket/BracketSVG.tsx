@@ -118,7 +118,7 @@ export function BracketSVG({
           )}
         </Tree>
       </Group>
-      {winnerData ? (
+      {winnerData?.winningPlayer ? (
         <Group top={height / 2 - 20} left={xMax / 2 - 20}>
           <rect
             style={{ cursor: "pointer" }}

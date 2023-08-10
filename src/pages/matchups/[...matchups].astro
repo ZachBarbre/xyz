@@ -78,15 +78,15 @@ export async function getStaticPaths() {
 const { title, bracketSkeleton, pickData, matchupData } = Astro.props;
 
 const bracketData = buildBracket(bracketSkeleton, pickData, matchupData);
-const vgOstWinsByPlayer = getWinsByPlayer(pickData, matchupData);
+const winsByPlayer = getWinsByPlayer(pickData, matchupData);
 const totalMatchUps = matchupData.length;
-const vgOstVotesByPlayer = getVotesByPlayer(pickData, matchupData);
-const vgOstOneVoteWinsByPlayer = getOneVoteByPlayer(
+const votesByPlayer = getVotesByPlayer(pickData, matchupData);
+const oneVoteWinsByPlayer = getOneVoteByPlayer(
   pickData,
   matchupData,
   "winner"
 );
-const totalOneVoteWins = vgOstOneVoteWinsByPlayer.reduce(
+const totalOneVoteWins = oneVoteWinsByPlayer.reduce(
   (wins, player) => wins + player.yValue,
   0
 );
@@ -119,11 +119,11 @@ const vgOSTVotesByPick = getVotesByPick(pickData, matchupData);
     <div class="chart-grid">
       <article>
         <h5>Total Wins <span>{`Matchups Played: ${totalMatchUps}`}</span></h5>
-        <BarChart client:only="react" data={vgOstWinsByPlayer} />
+        <BarChart client:only="react" data={winsByPlayer} />
       </article>
       <article>
         <h5>Total Votes</h5>
-        <BarChart client:only="react" data={vgOstVotesByPlayer} />
+        <BarChart client:only="react" data={votesByPlayer} />
       </article>
       <article>
         <h5>
@@ -137,7 +137,7 @@ const vgOSTVotesByPick = getVotesByPick(pickData, matchupData);
         </h5>
         <BarChart
           client:only="react"
-          data={vgOstOneVoteWinsByPlayer}
+          data={oneVoteWinsByPlayer}
           ticks={5}
         />
       </article>
