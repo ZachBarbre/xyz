@@ -8,6 +8,9 @@ import { getJudgeVotesByPlayer } from "../../matchupDataUtils/getJudgeVotesByPla
 import { getOneVoteByPlayer } from "../../matchupDataUtils/getOneVoteByPlayer";
 import { buildBracket } from "../../matchupDataUtils/buildBracket";
 import { getVotesByPick } from "../../matchupDataUtils/getVotesByPick";
+import punkBracket from "../../matchUpData/punkBracket";
+import punkMatchups from "../../matchUpData/punkMatchups";
+import punkPicks from "../../matchUpData/punkPicks";
 import woodstockBracket from "../../matchUpData/woodstockBracket";
 import woodstockMatchups from "../../matchUpData/woodstockMatchups";
 import woodstockPicks from "../../matchUpData/woodstockPicks";
@@ -23,7 +26,6 @@ import classicRockMatchups from "../../matchUpData/classicRockMatchups";
 import musicalsBracket from "../../matchUpData/musicalsBracket";
 import musicalsPicks from "../../matchUpData/musicalsPicks";
 import musicalsMatchups from "../../matchUpData/musicalsMatchups";
-
 
 export async function getStaticPaths() {
   return [
@@ -72,6 +74,15 @@ export async function getStaticPaths() {
         matchupData: woodstockMatchups,
       },
     },
+    {
+      params: { matchups: "punk" },
+      props: {
+        title: "Punk",
+        bracketSkeleton: punkBracket,
+        pickData: punkPicks,
+        matchupData: punkMatchups,
+      },
+    },
   ];
 }
 
@@ -81,29 +92,25 @@ const bracketData = buildBracket(bracketSkeleton, pickData, matchupData);
 const winsByPlayer = getWinsByPlayer(pickData, matchupData);
 const totalMatchUps = matchupData.length;
 const votesByPlayer = getVotesByPlayer(pickData, matchupData);
-const oneVoteWinsByPlayer = getOneVoteByPlayer(
-  pickData,
-  matchupData,
-  "winner"
-);
+const oneVoteWinsByPlayer = getOneVoteByPlayer(pickData, matchupData, "winner");
 const totalOneVoteWins = oneVoteWinsByPlayer.reduce(
   (wins, player) => wins + player.yValue,
-  0
+  0,
 );
 const vgOstOneVoteLossesByPlayer = getOneVoteByPlayer(
   pickData,
   matchupData,
-  "loser"
+  "loser",
 );
 const vgOstJudgeWinVotesByPlayer = getJudgeVotesByPlayer(
   pickData,
   matchupData,
-  "winner"
+  "winner",
 );
 const vgOstJudgeLossVotesByPlayer = getJudgeVotesByPlayer(
   pickData,
   matchupData,
-  "loser"
+  "loser",
 );
 
 const vgOSTVotesByPick = getVotesByPick(pickData, matchupData);
@@ -130,16 +137,12 @@ const vgOSTVotesByPick = getVotesByPick(pickData, matchupData);
           One Vote Wins <span
             >{
               `Total (%): ${totalOneVoteWins} (${Math.round(
-                (totalOneVoteWins / totalMatchUps) * 100
+                (totalOneVoteWins / totalMatchUps) * 100,
               )}%)`
             }</span
           >
         </h5>
-        <BarChart
-          client:only="react"
-          data={oneVoteWinsByPlayer}
-          ticks={5}
-        />
+        <BarChart client:only="react" data={oneVoteWinsByPlayer} ticks={5} />
       </article>
       <article>
         <h5>One Vote Losses</h5>

@@ -71,8 +71,7 @@ export default [
     winningSong:
       "https://open.spotify.com/track/12ucCd1VANzNJSCMQ5UMvO?si=XE57UuQhS0O4XTIe8_S-kw&context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO1M2m7C",
     loser: "Roky Erickson",
-    losingSong:
-      "https://open.spotify.com/track/5W7lOv4tIoOj2gI1qbyEji",
+    losingSong: "https://open.spotify.com/track/5W7lOv4tIoOj2gI1qbyEji",
     winVotes: 6,
     lossVotes: 5,
     judgeVote: true,
@@ -81,8 +80,7 @@ export default [
     round: 0,
     matchup: 7,
     winner: "The Police",
-    winningSong:
-      "https://spotify.link/wr3Rexwh2xb",
+    winningSong: "https://spotify.link/wr3Rexwh2xb",
     loser: "Chicago",
     losingSong:
       "https://open.spotify.com/track/6FYcpCjvjTFlKRSSmh13lX?si=BzkpbG75Rx2zQh_2wFoVfA&app_destination=copy-link",
@@ -107,8 +105,7 @@ export default [
     round: 1,
     matchup: 1,
     winner: "Rush",
-    winningSong:
-      "https://spotify.link/cIU2MNX48xb",
+    winningSong: "https://spotify.link/cIU2MNX48xb",
     loser: "T. Rex",
     losingSong:
       "https://open.spotify.com/track/6FsQrRpBLgsrFeAeiQqytm?si=zIg--XueTVyhXlEiL1kmPA&app_destination=copy-link",
@@ -185,8 +182,7 @@ export default [
     round: 1,
     matchup: 7,
     winner: "The Beatles",
-    winningSong:
-      "https://open.spotify.com/track/6dGnYIeXmHdcikdzNNDMm2",
+    winningSong: "https://open.spotify.com/track/6dGnYIeXmHdcikdzNNDMm2",
     loser: "CCR",
     losingSong:
       "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU?si=242c5fe29b0b44c8",
@@ -263,8 +259,7 @@ export default [
     round: 1,
     matchup: 13,
     winner: "The Who",
-    winningSong:
-      "https://open.spotify.com/track/3qiyyUfYe7CRYLucrPmulD",
+    winningSong: "https://open.spotify.com/track/3qiyyUfYe7CRYLucrPmulD",
     loser: "The Police",
     losingSong:
       "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO?si=3b2782de1fc2440c",
@@ -308,7 +303,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/0mOMvN8GNGAVW5e5934fUn?si=DKayej1fQK-_u1d3cCTkmw&dd=1",
     winVotes: 9,
-    lossVotes:2,
+    lossVotes: 2,
     judgeVote: false,
   },
   {
@@ -321,7 +316,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/3QZ7uX97s82HFYSmQUAN1D?si=df7ce5e2399546e6",
     winVotes: 9,
-    lossVotes:3,
+    lossVotes: 3,
     judgeVote: false,
   },
   {
@@ -334,7 +329,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/0ZQmpf5gk4k5VMopcAtyAc?si=a1752610f48c498b",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
   {
@@ -347,7 +342,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa?si=dpWzu-tjRCCzKp5IBQuhiA&dd=1",
     winVotes: 7,
-    lossVotes:3,
+    lossVotes: 3,
     judgeVote: false,
   },
   {
@@ -360,7 +355,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/1GqlvSEtMx5xbGptxOTTyk?si=e9cb4141b8de4152",
     winVotes: 6,
-    lossVotes:5,
+    lossVotes: 5,
     judgeVote: true,
   },
   {
@@ -373,7 +368,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/3fkPMWQ6cBNBLuFcPyMS8s?si=Foqr3N3ZSrq0u6NtKC4nww",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
   {
@@ -386,7 +381,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/4JRem7xHp2l0kmUvt9zCKu?si=tas5hR37QKihHzTT0_EnjQ",
     winVotes: 8,
-    lossVotes:2,
+    lossVotes: 2,
     judgeVote: false,
   },
   {
@@ -399,7 +394,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/6LbbHFEajG9e4m0G3L47c4?si=98121cc2b2b3423d",
     winVotes: 8,
-    lossVotes:2,
+    lossVotes: 2,
     judgeVote: false,
   },
   {
@@ -412,7 +407,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/6TBJCwgdhwkzjpSjdqJUHC?si=IP4BIoR3TzeB6y182JMInQ",
     winVotes: 6,
-    lossVotes:5,
+    lossVotes: 5,
     judgeVote: true,
   },
   {
@@ -425,7 +420,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/6QDbGdbJ57Mtkflsg42WV5?si=SAI2mYcBSK-Fr_q-0zKXEg",
     winVotes: 10,
-    lossVotes:0,
+    lossVotes: 0,
     judgeVote: false,
   },
   {
@@ -438,7 +433,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/4uY2ijmE5S2umgXo6cvXnJ?si=tzhb-i3zTU6m9650oTph6g",
     winVotes: 6,
-    lossVotes:5,
+    lossVotes: 5,
     judgeVote: true,
   },
   {
@@ -451,7 +446,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/54X78diSLoUDI3joC2bjMz?si=SpHxrM2PT3ed6EwByfiNBQ",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
   {
@@ -464,7 +459,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/08mG3Y1vljYA6bvDt4Wqkj?si=oIwVA0bwTlq6ZPFMOQU1Lw",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
   {
@@ -477,7 +472,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/2QKmX3eS0AE5DTLhHT8F4I?si=pMNMVEP7SsSQAv_HNAMa_A",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
   {
@@ -490,7 +485,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/5AzpZ5ADn1AFPxcEBd2Ugf?si=pfRrFH81QFSy1yn82SBCKQ",
     winVotes: 6,
-    lossVotes:5,
+    lossVotes: 5,
     judgeVote: true,
   },
   {
@@ -503,7 +498,7 @@ export default [
     losingSong:
       "https://open.spotify.com/track/0NN32Knbyo4gM1DKY9rdzg?si=suD3-WPQS-my0_SXghmWig&context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO4keHBe",
     winVotes: 6,
-    lossVotes:4,
+    lossVotes: 4,
     judgeVote: false,
   },
 ];
