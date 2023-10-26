@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ParentSize } from "@visx/responsive";
 import { BracketSVG } from "./BracketSVG";
 import styles from "./Bracket.module.css";
-import { TreeNode } from "./Matchup";
+import { type TreeNode } from "./Matchup";
 export const margin = { top: 20, bottom: 20, left: 20, right: 20 };
 
 export const lineTextColor = "#c2c9ce";

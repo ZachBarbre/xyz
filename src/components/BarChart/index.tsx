@@ -1,4 +1,4 @@
-import { useMemo, MouseEvent } from "react";
+import { useMemo, type MouseEvent } from "react";
 import { Group } from "@visx/group";
 import { scaleLinear, scaleBand } from "@visx/scale";
 import { Bar } from "@visx/shape";
@@ -52,7 +52,7 @@ function BarChartSVG({ data, parentWidth, ticks, margin }: BarSVGProps) {
         domain: data.map(getPlayer),
         padding: 0.25,
       }),
-    [xMax]
+    [xMax],
   );
 
   const yScale = useMemo(
@@ -62,12 +62,12 @@ function BarChartSVG({ data, parentWidth, ticks, margin }: BarSVGProps) {
         domain: [0, Math.round(Math.max(...data.map(getWins))) || 1],
         nice: true,
       }),
-    [yMax]
+    [yMax],
   );
 
   const handleMouseOver = (
     evt: MouseEvent,
-    datum: { yValue: number; xValue: string }
+    datum: { yValue: number; xValue: string },
   ) => {
     const coords = localPoint(evt);
     showTooltip({

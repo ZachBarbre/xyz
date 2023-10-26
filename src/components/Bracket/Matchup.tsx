@@ -1,6 +1,6 @@
 import { Group } from "@visx/group";
-import { HierarchyPointNode } from "@visx/hierarchy/lib/types";
-import { BracketMatchup } from "../../matchupDataUtils/dataTypes";
+import { type HierarchyPointNode } from "@visx/hierarchy/lib/types";
+import { type BracketMatchup } from "../../matchupDataUtils/dataTypes";
 import { lineTextColor } from "./index";
 
 export interface MatchupProps {
