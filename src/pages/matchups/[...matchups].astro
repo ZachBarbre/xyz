@@ -26,11 +26,23 @@ import classicRockMatchups from "../../matchUpData/classicRockMatchups";
 import musicalsBracket from "../../matchUpData/musicalsBracket";
 import musicalsPicks from "../../matchUpData/musicalsPicks";
 import musicalsMatchups from "../../matchUpData/musicalsMatchups";
+import hiphopBracket from "../../matchUpData/hiphopBracket";
+import hiphopPicks from "../../matchUpData/hiphopPicks";
+import hiphopMatchups from "../../matchUpData/hiphopMatchups";
 
 export async function getStaticPaths() {
   return [
     {
       params: { matchups: undefined },
+      props: {
+        title: "Hip Hop",
+        bracketSkeleton: hiphopBracket,
+        pickData: hiphopPicks,
+        matchupData: hiphopMatchups,
+      },
+    },
+    {
+      params: { matchups: "musicals" },
       props: {
         title: "Musicals",
         bracketSkeleton: musicalsBracket,
