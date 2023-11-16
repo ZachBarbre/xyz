@@ -57,3 +57,10 @@
     </li>
   </ul>
 </nav>
+
+<script type="module">
+  const preferLight = window.matchMedia("prefers-color-scheme: light").matches;
+  if (preferLight) {
+    document.querySelector('link[rel="icon"]').setAttribute("href", "/sun.svg");
+  }
+</script>

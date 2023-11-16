@@ -21,7 +21,7 @@ export function UseRefDemo() {
         <p>
           Here, I'm mimicking the functionality of useRef using useState. Like a
           couple of other things in the playground, this is an interesting quiz
-          from
+          from{` `}
           <a href="https://bytes.dev/share/cHVycGxlLWNvb2wtYml0ei5qcGc=">
             bytes.dev
           </a>
