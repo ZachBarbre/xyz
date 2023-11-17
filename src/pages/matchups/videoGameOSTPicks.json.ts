@@ -1,7 +1,9 @@
 import videoGameOSTPicks from "../../matchUpData/videoGameOSTPicks";
 
-export function get() {
-  return {
-    body: JSON.stringify(videoGameOSTPicks),
-  };
+export async function GET() {
+  return new Response(
+    JSON.stringify({
+      body: JSON.stringify(videoGameOSTPicks),
+    }),
+  );
 }
