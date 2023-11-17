@@ -1,7 +1,9 @@
 import videoGameOSTMatchups from "../../matchUpData/videoGameOSTMatchups";
 
-export function get() {
-  return {
-    body: JSON.stringify(videoGameOSTMatchups),
-  };
+export async function GET() {
+  return new Response(
+    JSON.stringify({
+      body: JSON.stringify(videoGameOSTMatchups),
+    }),
+  );
 }

@@ -1,7 +1,9 @@
 import videoGameOSTBracket from "../../matchUpData/videoGameOSTBracket";
 
-export function get() {
-  return {
-    body: JSON.stringify(videoGameOSTBracket),
-  };
+export async function GET() {
+  return new Response(
+    JSON.stringify({
+      body: JSON.stringify(videoGameOSTBracket),
+    }),
+  );
 }
