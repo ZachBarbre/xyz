@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="THE PULSE">
+  <div class="container">
+    <h2>It's gonna pulse</h2>
+    <div data-toggle="playing" class="circle"></div>
+    <button class="toggle">Stop</button>
+    <p>
+      The button above uses the <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Animation"
+        >Animation Web API</a
+      > to stop and start the pulsing of the circle.
+    </p>
+  </div>
+</Layout>
+
+<style>
+  .circle {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .toggle {
+    width: 100px;
+    margin-block-start: var(--typography-spacing-vertical);
+  }
+</style>
+
+<script>
+  const button = document.querySelector(".toggle");
+  const circle = document.querySelector(".circle");
+  const circleAnimation = circle.getAnimations()[0];
+
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    const isPlaying = circle.getAttribute("data-toggle");
+    if (isPlaying === "playing") {
+      circleAnimation.pause();
+      circle.setAttribute("data-toggle", "stopped");
+      button.textContent = "Play";
+    } else {
+      circleAnimation.play();
+      circle.setAttribute("data-toggle", "playing");
+      button.textContent = "Stop";
+    }
+  });
+</script>
