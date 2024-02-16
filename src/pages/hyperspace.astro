@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Starfield">
+  <div class="container">
+    <canvas width="500" height="500" id="outerspace"></canvas>
+    <button id="stop">Stop</button>
+  </div>
+</Layout>
+
+<style>
+  #outerspace {
+    border: 1px solid var(--form-element-border-color);
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 0px #333);
+  }
+
+  button {
+    margin-block-start: 10px;
+    width: 200px;
+  }
+</style>
+
+<script>
+  const outerspace = document.querySelector("#outerspace") as HTMLCanvasElement;
+  const mainContext = outerspace.getContext("2d")!;
+  const stopButton = document.querySelector("#stop");
+  let frameId: number;
+
+  stopButton.addEventListener("click", () => {
+    if (stopButton.textContent === "Stop") {
+      cancelAnimationFrame(frameId);
+      stopButton.textContent = "Play";
+    } else {
+      requestAnimationFrame(draw);
+      stopButton.textContent = "Stop";
+    }
+  });
+
+  const canvasWidth = outerspace.width;
+  const canvasHeight = outerspace.height;
+
+  const centerX = canvasWidth / 2;
+  const centerY = canvasHeight / 2;
+
+  const numberOfStars = 500;
+  let stars: Star[] = [];
+
+  interface Star {
+    x: number;
+    y: number;
+    counter: number;
+    radiusMax: number;
+    radius: number;
+    speed: number;
+    context: CanvasRenderingContext2D;
+  }
+
+  class Star {
+    constructor() {
+      this.x = getRandomInt(-centerX, centerX);
+      this.y = getRandomInt(-centerY, centerY);
+      // this.counter = getRandomInt(1, canvasWidth);
+      this.counter = getRandomInt(1, canvasWidth);
+      this.radiusMax = 1 + Math.random() * 10;
+      this.speed = getRandomInt(1, 5);
+    }
+
+    drawStar() {
+      this.counter -= this.speed;
+
+      if (this.counter < 1) {
+        this.counter = canvasWidth;
+        this.x = getRandomInt(-centerX, centerX);
+        this.y = getRandomInt(-centerY, centerY);
+
+        this.radiusMax = 1 + Math.random() * 10;
+        this.speed = getRandomInt(1, 5);
+      }
+
+      let xRatio = this.x / this.counter;
+      let yRatio = this.y / this.counter;
+
+      let starX = remap(xRatio, 0, 1, 0, canvasWidth);
+      let starY = remap(yRatio, 0, 1, 0, canvasHeight);
+      let radius = remap(this.counter, 0, canvasWidth, this.radiusMax, 0);
+
+      mainContext.beginPath();
+
+      mainContext.arc(starX, starY, radius, 0, Math.PI * 2, false);
+      mainContext.closePath();
+
+      mainContext.fillStyle = "#fff";
+      mainContext.fill();
+    }
+  }
+
+  function setup() {
+    for (let index = 0; index < numberOfStars; index += 1) {
+      const star = new Star();
+      stars.push(star);
+    }
+  }
+  setup();
+
+  function draw() {
+    mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+    mainContext.fillStyle = "#111";
+    mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+
+    mainContext.translate(centerX, centerY);
+
+    for (let index = 0; index < stars.length; index += 1) {
+      const star = stars[index];
+      star.drawStar();
+    }
+
+    mainContext.translate(-centerX, -centerY);
+
+    frameId = requestAnimationFrame(draw);
+  }
+  draw();
+
+  function getRandomInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function remap(
+    value: number,
+    istart: number,
+    istop: number,
+    ostart: number,
+    ostop: number,
+  ) {
+    // Perform the mapping calculation
+    return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+  }
+</script>
