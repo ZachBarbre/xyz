@@ -47,6 +47,15 @@ import Layout from "../layouts/Layout.astro";
   const numberOfStars = 500;
   let stars: Star[] = [];
 
+  let framesPerSecond = 60;
+
+  let interval = Math.floor(1000 / framesPerSecond);
+  let startTime = performance.now();
+  let previousTime = startTime;
+
+  let currentTime = 0;
+  let deltaTime = 0;
+
   interface Star {
     x: number;
     y: number;
@@ -104,19 +113,24 @@ import Layout from "../layouts/Layout.astro";
   }
   setup();
 
-  function draw() {
-    mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
-    mainContext.fillStyle = "#111";
-    mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+  function draw(timeStamp = 0) {
+    currentTime = timeStamp;
+    deltaTime = currentTime - previousTime;
 
-    mainContext.translate(centerX, centerY);
+    if (deltaTime > interval) {
+      mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+      mainContext.fillStyle = "#111";
+      mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
 
-    for (let index = 0; index < stars.length; index += 1) {
-      const star = stars[index];
-      star.drawStar();
+      mainContext.translate(centerX, centerY);
+
+      for (let index = 0; index < stars.length; index += 1) {
+        const star = stars[index];
+        star.drawStar();
+      }
+
+      mainContext.translate(-centerX, -centerY);
     }
-
-    mainContext.translate(-centerX, -centerY);
 
     frameId = requestAnimationFrame(draw);
   }
