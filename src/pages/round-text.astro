@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+let roundText = Array.from(
+  { length: 24 },
+  (v) => "Howell Bespoke Leather Working and Hats"
+);
+---
+
+<Layout title="Round Text">
+  <div class="container">
+    <div class="grid">
+      <h2>Round Rotating Text</h2>
+      <h3>With only CSS</h3>
+      <div class="text-container">
+        {
+          roundText.map((text, index) => {
+            if (index === 0) {
+              return <span style={`--i: ${index}`}>{text}</span>;
+            }
+            return (
+              <span aria-hidden="true" style={`--i: ${index}`}>
+                {text}
+              </span>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: start;
+  }
+
+  .text-container {
+    margin-block-start: calc(1.5em / sin(15deg));
+    margin-inline-start: calc(var(--spacing) * 1.5 / sin(15deg));
+    position: relative;
+    perspective: 5em;
+    animation: rotate 24s infinite linear;
+  }
+
+  span {
+    font-family: cursive;
+    font-size: 30px;
+    position: absolute;
+    width: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: calc(var(--i) * -1em);
+    transform: translate(-50%, -50%) rotate(calc(15deg * var(--i)))
+      translateY(calc(-1em / sin(15deg) + 0.1em)) rotateX(-90deg);
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg) rotateX(20deg) rotate(720deg);
+    }
+    to {
+      transform: rotate(360deg) rotateX(20deg) rotate(0deg);
+    }
+  }
+</style>
